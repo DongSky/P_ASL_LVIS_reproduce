@@ -1,0 +1,737 @@
+creating model...
+done
+
+loading annotations into memory...
+Done (t=6.16s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=44.66s)
+creating index...
+index created!
+len(val_dataset)):  19626
+len(train_dataset)):  99388
+Used parameters:
+Image_size: 448
+Learning_rate: 0.0006
+Epochs: 30
+Epoch [0/30], Step [000/1553], LR 2.4e-05, Loss: 26929.8
+Epoch [0/30], Step [100/1553], LR 2.4e-05, Loss: 2106.8
+Epoch [0/30], Step [200/1553], LR 2.5e-05, Loss: 856.7
+Epoch [0/30], Step [300/1553], LR 2.5e-05, Loss: 779.6
+Epoch [0/30], Step [400/1553], LR 2.7e-05, Loss: 772.4
+Epoch [0/30], Step [500/1553], LR 2.8e-05, Loss: 768.4
+Epoch [0/30], Step [600/1553], LR 3.0e-05, Loss: 694.8
+Epoch [0/30], Step [700/1553], LR 3.2e-05, Loss: 609.0
+Epoch [0/30], Step [800/1553], LR 3.4e-05, Loss: 569.1
+Epoch [0/30], Step [900/1553], LR 3.7e-05, Loss: 565.0
+Epoch [0/30], Step [1000/1553], LR 4.0e-05, Loss: 556.4
+Epoch [0/30], Step [1100/1553], LR 4.4e-05, Loss: 495.4
+Epoch [0/30], Step [1200/1553], LR 4.7e-05, Loss: 463.5
+Epoch [0/30], Step [1300/1553], LR 5.1e-05, Loss: 479.6
+Epoch [0/30], Step [1400/1553], LR 5.6e-05, Loss: 414.2
+Epoch [0/30], Step [1500/1553], LR 6.0e-05, Loss: 454.8
+Prior (train), first 5 classes: tensor([0.0432, 0.0661, 0.1129, 0.0535, 0.0438], device='cuda:0')
+Prior (train), first 10 classes: ['tennis_racket' 'box' 'car_(automobile)' 'wheel' 'streetlight'
+ 'street_sign' 'book' 'table' 'signboard' 'bowl']
+Model saved successfully.
+starting validation
+mAP score regular 43.43, mAP score EMA 22.85
+current_mAP = 43.43, highest_mAP = 43.43
+
+Epoch [1/30], Step [000/1553], LR 6.3e-05, Loss: 378.5
+Epoch [1/30], Step [100/1553], LR 6.8e-05, Loss: 413.0
+Epoch [1/30], Step [200/1553], LR 7.3e-05, Loss: 419.9
+Epoch [1/30], Step [300/1553], LR 7.8e-05, Loss: 379.9
+Epoch [1/30], Step [400/1553], LR 8.4e-05, Loss: 451.8
+Epoch [1/30], Step [500/1553], LR 9.0e-05, Loss: 381.4
+Epoch [1/30], Step [600/1553], LR 9.7e-05, Loss: 412.3
+Epoch [1/30], Step [700/1553], LR 1.0e-04, Loss: 386.8
+Epoch [1/30], Step [800/1553], LR 1.1e-04, Loss: 337.3
+Epoch [1/30], Step [900/1553], LR 1.2e-04, Loss: 381.2
+Epoch [1/30], Step [1000/1553], LR 1.2e-04, Loss: 335.8
+Epoch [1/30], Step [1100/1553], LR 1.3e-04, Loss: 364.0
+Epoch [1/30], Step [1200/1553], LR 1.4e-04, Loss: 337.9
+Epoch [1/30], Step [1300/1553], LR 1.5e-04, Loss: 329.4
+Epoch [1/30], Step [1400/1553], LR 1.6e-04, Loss: 396.4
+Epoch [1/30], Step [1500/1553], LR 1.6e-04, Loss: 285.9
+Prior (train), first 5 classes: tensor([0.0290, 0.0523, 0.0820, 0.0356, 0.0267], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'car_(automobile)' 'box' 'table' 'shoe' 'bowl' 'jersey'
+ 'streetlight' 'handle' 'spectacles']
+Model saved successfully.
+starting validation
+mAP score regular 58.77, mAP score EMA 37.05
+current_mAP = 58.77, highest_mAP = 58.77
+
+Epoch [2/30], Step [000/1553], LR 1.7e-04, Loss: 277.7
+Epoch [2/30], Step [100/1553], LR 1.8e-04, Loss: 279.4
+Epoch [2/30], Step [200/1553], LR 1.9e-04, Loss: 294.7
+Epoch [2/30], Step [300/1553], LR 1.9e-04, Loss: 311.0
+Epoch [2/30], Step [400/1553], LR 2.0e-04, Loss: 241.5
+Epoch [2/30], Step [500/1553], LR 2.1e-04, Loss: 336.5
+Epoch [2/30], Step [600/1553], LR 2.2e-04, Loss: 292.2
+Epoch [2/30], Step [700/1553], LR 2.3e-04, Loss: 384.5
+Epoch [2/30], Step [800/1553], LR 2.4e-04, Loss: 322.4
+Epoch [2/30], Step [900/1553], LR 2.5e-04, Loss: 272.8
+Epoch [2/30], Step [1000/1553], LR 2.6e-04, Loss: 266.1
+Epoch [2/30], Step [1100/1553], LR 2.7e-04, Loss: 272.3
+Epoch [2/30], Step [1200/1553], LR 2.8e-04, Loss: 315.4
+Epoch [2/30], Step [1300/1553], LR 2.9e-04, Loss: 331.3
+Epoch [2/30], Step [1400/1553], LR 3.0e-04, Loss: 365.9
+Epoch [2/30], Step [1500/1553], LR 3.1e-04, Loss: 338.9
+Prior (train), first 5 classes: tensor([0.0233, 0.0465, 0.0695, 0.0289, 0.0200], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'car_(automobile)' 'table' 'jersey' 'handle' 'spectacles'
+ 'box' 'signboard' 'streetlight']
+Model saved successfully.
+starting validation
+mAP score regular 62.40, mAP score EMA 54.68
+current_mAP = 62.40, highest_mAP = 62.40
+
+Epoch [3/30], Step [000/1553], LR 3.1e-04, Loss: 226.2
+Epoch [3/30], Step [100/1553], LR 3.2e-04, Loss: 366.0
+Epoch [3/30], Step [200/1553], LR 3.3e-04, Loss: 334.5
+Epoch [3/30], Step [300/1553], LR 3.4e-04, Loss: 316.5
+Epoch [3/30], Step [400/1553], LR 3.5e-04, Loss: 259.0
+Epoch [3/30], Step [500/1553], LR 3.6e-04, Loss: 280.3
+Epoch [3/30], Step [600/1553], LR 3.7e-04, Loss: 270.9
+Epoch [3/30], Step [700/1553], LR 3.8e-04, Loss: 279.3
+Epoch [3/30], Step [800/1553], LR 3.9e-04, Loss: 290.4
+Epoch [3/30], Step [900/1553], LR 4.0e-04, Loss: 281.8
+Epoch [3/30], Step [1000/1553], LR 4.1e-04, Loss: 271.5
+Epoch [3/30], Step [1100/1553], LR 4.2e-04, Loss: 240.3
+Epoch [3/30], Step [1200/1553], LR 4.3e-04, Loss: 296.3
+Epoch [3/30], Step [1300/1553], LR 4.3e-04, Loss: 301.9
+Epoch [3/30], Step [1400/1553], LR 4.4e-04, Loss: 314.1
+Epoch [3/30], Step [1500/1553], LR 4.5e-04, Loss: 295.8
+Prior (train), first 5 classes: tensor([0.0202, 0.0432, 0.0630, 0.0254, 0.0164], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'car_(automobile)' 'handle' 'jersey' 'spectacles'
+ 'jacket' 'signboard' 'trousers']
+Model saved successfully.
+starting validation
+mAP score regular 61.31, mAP score EMA 63.59
+current_mAP = 63.59, highest_mAP = 63.59
+
+Epoch [4/30], Step [000/1553], LR 4.6e-04, Loss: 287.3
+Epoch [4/30], Step [100/1553], LR 4.6e-04, Loss: 224.0
+Epoch [4/30], Step [200/1553], LR 4.7e-04, Loss: 333.4
+Epoch [4/30], Step [300/1553], LR 4.8e-04, Loss: 282.2
+Epoch [4/30], Step [400/1553], LR 4.9e-04, Loss: 296.2
+Epoch [4/30], Step [500/1553], LR 5.0e-04, Loss: 229.5
+Epoch [4/30], Step [600/1553], LR 5.0e-04, Loss: 275.8
+Epoch [4/30], Step [700/1553], LR 5.1e-04, Loss: 257.2
+Epoch [4/30], Step [800/1553], LR 5.2e-04, Loss: 262.5
+Epoch [4/30], Step [900/1553], LR 5.2e-04, Loss: 257.2
+Epoch [4/30], Step [1000/1553], LR 5.3e-04, Loss: 251.0
+Epoch [4/30], Step [1100/1553], LR 5.4e-04, Loss: 308.3
+Epoch [4/30], Step [1200/1553], LR 5.4e-04, Loss: 254.3
+Epoch [4/30], Step [1300/1553], LR 5.5e-04, Loss: 306.6
+Epoch [4/30], Step [1400/1553], LR 5.5e-04, Loss: 300.8
+Epoch [4/30], Step [1500/1553], LR 5.6e-04, Loss: 227.4
+Prior (train), first 5 classes: tensor([0.0182, 0.0408, 0.0590, 0.0230, 0.0142], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'car_(automobile)' 'handle' 'jersey' 'jacket'
+ 'trousers' 'spectacles' 'signboard']
+Model saved successfully.
+starting validation
+mAP score regular 61.63, mAP score EMA 65.81
+current_mAP = 65.81, highest_mAP = 65.81
+
+Epoch [5/30], Step [000/1553], LR 5.6e-04, Loss: 235.7
+Epoch [5/30], Step [100/1553], LR 5.7e-04, Loss: 242.5
+Epoch [5/30], Step [200/1553], LR 5.7e-04, Loss: 267.3
+Epoch [5/30], Step [300/1553], LR 5.7e-04, Loss: 280.4
+Epoch [5/30], Step [400/1553], LR 5.8e-04, Loss: 273.6
+Epoch [5/30], Step [500/1553], LR 5.8e-04, Loss: 318.4
+Epoch [5/30], Step [600/1553], LR 5.9e-04, Loss: 286.0
+Epoch [5/30], Step [700/1553], LR 5.9e-04, Loss: 243.8
+Epoch [5/30], Step [800/1553], LR 5.9e-04, Loss: 325.3
+Epoch [5/30], Step [900/1553], LR 5.9e-04, Loss: 284.7
+Epoch [5/30], Step [1000/1553], LR 6.0e-04, Loss: 238.4
+Epoch [5/30], Step [1100/1553], LR 6.0e-04, Loss: 263.7
+Epoch [5/30], Step [1200/1553], LR 6.0e-04, Loss: 229.5
+Epoch [5/30], Step [1300/1553], LR 6.0e-04, Loss: 270.6
+Epoch [5/30], Step [1400/1553], LR 6.0e-04, Loss: 273.2
+Epoch [5/30], Step [1500/1553], LR 6.0e-04, Loss: 294.7
+Prior (train), first 5 classes: tensor([0.0168, 0.0392, 0.0563, 0.0213, 0.0126], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'car_(automobile)' 'handle' 'jersey' 'jacket'
+ 'trousers' 'signboard' 'spectacles']
+Model saved successfully.
+starting validation
+mAP score regular 61.83, mAP score EMA 65.98
+current_mAP = 65.98, highest_mAP = 65.98
+
+Epoch [6/30], Step [000/1553], LR 6.0e-04, Loss: 308.5
+Epoch [6/30], Step [100/1553], LR 6.0e-04, Loss: 212.6
+Epoch [6/30], Step [200/1553], LR 6.0e-04, Loss: 234.0
+Epoch [6/30], Step [300/1553], LR 6.0e-04, Loss: 237.6
+Epoch [6/30], Step [400/1553], LR 6.0e-04, Loss: 277.3
+Epoch [6/30], Step [500/1553], LR 6.0e-04, Loss: 297.4
+Epoch [6/30], Step [600/1553], LR 6.0e-04, Loss: 247.9
+Epoch [6/30], Step [700/1553], LR 6.0e-04, Loss: 259.2
+Epoch [6/30], Step [800/1553], LR 6.0e-04, Loss: 271.3
+Epoch [6/30], Step [900/1553], LR 6.0e-04, Loss: 273.2
+Epoch [6/30], Step [1000/1553], LR 6.0e-04, Loss: 220.2
+Epoch [6/30], Step [1100/1553], LR 6.0e-04, Loss: 264.4
+Epoch [6/30], Step [1200/1553], LR 6.0e-04, Loss: 252.5
+Epoch [6/30], Step [1300/1553], LR 6.0e-04, Loss: 256.4
+Epoch [6/30], Step [1400/1553], LR 6.0e-04, Loss: 267.9
+Epoch [6/30], Step [1500/1553], LR 6.0e-04, Loss: 269.6
+Prior (train), first 5 classes: tensor([0.0157, 0.0379, 0.0540, 0.0201, 0.0114], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'car_(automobile)' 'jacket' 'jersey'
+ 'trousers' 'signboard' 'spectacles']
+Model saved successfully.
+starting validation
+mAP score regular 61.08, mAP score EMA 65.56
+current_mAP = 65.56, highest_mAP = 65.98
+
+Epoch [7/30], Step [000/1553], LR 6.0e-04, Loss: 249.7
+Epoch [7/30], Step [100/1553], LR 6.0e-04, Loss: 221.2
+Epoch [7/30], Step [200/1553], LR 6.0e-04, Loss: 204.5
+Epoch [7/30], Step [300/1553], LR 6.0e-04, Loss: 170.5
+Epoch [7/30], Step [400/1553], LR 6.0e-04, Loss: 213.2
+Epoch [7/30], Step [500/1553], LR 6.0e-04, Loss: 192.5
+Epoch [7/30], Step [600/1553], LR 6.0e-04, Loss: 188.3
+Epoch [7/30], Step [700/1553], LR 5.9e-04, Loss: 252.4
+Epoch [7/30], Step [800/1553], LR 5.9e-04, Loss: 202.6
+Epoch [7/30], Step [900/1553], LR 5.9e-04, Loss: 206.2
+Epoch [7/30], Step [1000/1553], LR 5.9e-04, Loss: 231.8
+Epoch [7/30], Step [1100/1553], LR 5.9e-04, Loss: 232.4
+Epoch [7/30], Step [1200/1553], LR 5.9e-04, Loss: 212.0
+Epoch [7/30], Step [1300/1553], LR 5.9e-04, Loss: 215.0
+Epoch [7/30], Step [1400/1553], LR 5.9e-04, Loss: 228.7
+Epoch [7/30], Step [1500/1553], LR 5.9e-04, Loss: 228.1
+Prior (train), first 5 classes: tensor([0.0148, 0.0367, 0.0522, 0.0190, 0.0105], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'car_(automobile)' 'jacket' 'jersey'
+ 'trousers' 'signboard' 'hat']
+Model saved successfully.
+starting validation
+mAP score regular 61.46, mAP score EMA 65.06
+current_mAP = 65.06, highest_mAP = 65.98
+
+Epoch [8/30], Step [000/1553], LR 5.9e-04, Loss: 211.0
+Epoch [8/30], Step [100/1553], LR 5.9e-04, Loss: 221.6
+Epoch [8/30], Step [200/1553], LR 5.9e-04, Loss: 211.9
+Epoch [8/30], Step [300/1553], LR 5.9e-04, Loss: 228.1
+Epoch [8/30], Step [400/1553], LR 5.9e-04, Loss: 226.1
+Epoch [8/30], Step [500/1553], LR 5.9e-04, Loss: 241.4
+Epoch [8/30], Step [600/1553], LR 5.9e-04, Loss: 246.7
+Epoch [8/30], Step [700/1553], LR 5.8e-04, Loss: 210.2
+Epoch [8/30], Step [800/1553], LR 5.8e-04, Loss: 181.9
+Epoch [8/30], Step [900/1553], LR 5.8e-04, Loss: 220.3
+Epoch [8/30], Step [1000/1553], LR 5.8e-04, Loss: 211.7
+Epoch [8/30], Step [1100/1553], LR 5.8e-04, Loss: 251.1
+Epoch [8/30], Step [1200/1553], LR 5.8e-04, Loss: 198.6
+Epoch [8/30], Step [1300/1553], LR 5.8e-04, Loss: 205.4
+Epoch [8/30], Step [1400/1553], LR 5.8e-04, Loss: 228.6
+Epoch [8/30], Step [1500/1553], LR 5.8e-04, Loss: 184.8
+Prior (train), first 5 classes: tensor([0.0140, 0.0357, 0.0507, 0.0181, 0.0097], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'jacket' 'car_(automobile)' 'trousers'
+ 'jersey' 'signboard' 'pole']
+Model saved successfully.
+starting validation
+mAP score regular 60.92, mAP score EMA 64.71
+current_mAP = 64.71, highest_mAP = 65.98
+
+Epoch [9/30], Step [000/1553], LR 5.8e-04, Loss: 207.5
+Epoch [9/30], Step [100/1553], LR 5.8e-04, Loss: 180.3
+Epoch [9/30], Step [200/1553], LR 5.8e-04, Loss: 205.6
+Epoch [9/30], Step [300/1553], LR 5.7e-04, Loss: 214.0
+Epoch [9/30], Step [400/1553], LR 5.7e-04, Loss: 154.8
+Epoch [9/30], Step [500/1553], LR 5.7e-04, Loss: 201.7
+Epoch [9/30], Step [600/1553], LR 5.7e-04, Loss: 218.7
+Epoch [9/30], Step [700/1553], LR 5.7e-04, Loss: 211.5
+Epoch [9/30], Step [800/1553], LR 5.7e-04, Loss: 194.1
+Epoch [9/30], Step [900/1553], LR 5.7e-04, Loss: 196.5
+Epoch [9/30], Step [1000/1553], LR 5.7e-04, Loss: 253.2
+Epoch [9/30], Step [1100/1553], LR 5.7e-04, Loss: 204.9
+Epoch [9/30], Step [1200/1553], LR 5.6e-04, Loss: 190.7
+Epoch [9/30], Step [1300/1553], LR 5.6e-04, Loss: 220.6
+Epoch [9/30], Step [1400/1553], LR 5.6e-04, Loss: 211.1
+Epoch [9/30], Step [1500/1553], LR 5.6e-04, Loss: 234.8
+Prior (train), first 5 classes: tensor([0.0133, 0.0347, 0.0493, 0.0174, 0.0091], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'jacket' 'trousers' 'car_(automobile)'
+ 'jersey' 'pole' 'signboard']
+Model saved successfully.
+starting validation
+mAP score regular 60.74, mAP score EMA 64.02
+current_mAP = 64.02, highest_mAP = 65.98
+
+Epoch [10/30], Step [000/1553], LR 5.6e-04, Loss: 204.4
+Epoch [10/30], Step [100/1553], LR 5.6e-04, Loss: 211.5
+Epoch [10/30], Step [200/1553], LR 5.6e-04, Loss: 215.0
+Epoch [10/30], Step [300/1553], LR 5.6e-04, Loss: 209.5
+Epoch [10/30], Step [400/1553], LR 5.5e-04, Loss: 224.0
+Epoch [10/30], Step [500/1553], LR 5.5e-04, Loss: 203.8
+Epoch [10/30], Step [600/1553], LR 5.5e-04, Loss: 191.7
+Epoch [10/30], Step [700/1553], LR 5.5e-04, Loss: 138.6
+Epoch [10/30], Step [800/1553], LR 5.5e-04, Loss: 163.7
+Epoch [10/30], Step [900/1553], LR 5.5e-04, Loss: 164.7
+Epoch [10/30], Step [1000/1553], LR 5.5e-04, Loss: 213.5
+Epoch [10/30], Step [1100/1553], LR 5.4e-04, Loss: 188.2
+Epoch [10/30], Step [1200/1553], LR 5.4e-04, Loss: 200.3
+Epoch [10/30], Step [1300/1553], LR 5.4e-04, Loss: 175.0
+Epoch [10/30], Step [1400/1553], LR 5.4e-04, Loss: 153.7
+Epoch [10/30], Step [1500/1553], LR 5.4e-04, Loss: 202.3
+Prior (train), first 5 classes: tensor([0.0127, 0.0339, 0.0482, 0.0168, 0.0085], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'jacket' 'trousers' 'car_(automobile)'
+ 'jersey' 'pole' 'hat']
+Model saved successfully.
+starting validation
+mAP score regular 60.50, mAP score EMA 63.40
+current_mAP = 63.40, highest_mAP = 65.98
+
+Epoch [11/30], Step [000/1553], LR 5.4e-04, Loss: 143.3
+Epoch [11/30], Step [100/1553], LR 5.4e-04, Loss: 156.6
+Epoch [11/30], Step [200/1553], LR 5.3e-04, Loss: 174.6
+Epoch [11/30], Step [300/1553], LR 5.3e-04, Loss: 132.8
+Epoch [11/30], Step [400/1553], LR 5.3e-04, Loss: 146.7
+Epoch [11/30], Step [500/1553], LR 5.3e-04, Loss: 172.0
+Epoch [11/30], Step [600/1553], LR 5.3e-04, Loss: 176.2
+Epoch [11/30], Step [700/1553], LR 5.3e-04, Loss: 154.0
+Epoch [11/30], Step [800/1553], LR 5.3e-04, Loss: 174.8
+Epoch [11/30], Step [900/1553], LR 5.2e-04, Loss: 133.6
+Epoch [11/30], Step [1000/1553], LR 5.2e-04, Loss: 175.5
+Epoch [11/30], Step [1100/1553], LR 5.2e-04, Loss: 180.5
+Epoch [11/30], Step [1200/1553], LR 5.2e-04, Loss: 207.6
+Epoch [11/30], Step [1300/1553], LR 5.2e-04, Loss: 206.8
+Epoch [11/30], Step [1400/1553], LR 5.1e-04, Loss: 146.0
+Epoch [11/30], Step [1500/1553], LR 5.1e-04, Loss: 232.2
+Prior (train), first 5 classes: tensor([0.0122, 0.0331, 0.0471, 0.0162, 0.0080], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'jacket' 'trousers' 'jersey'
+ 'car_(automobile)' 'pole' 'hat']
+Model saved successfully.
+starting validation
+mAP score regular 60.58, mAP score EMA 62.96
+current_mAP = 62.96, highest_mAP = 65.98
+
+Epoch [12/30], Step [000/1553], LR 5.1e-04, Loss: 171.8
+Epoch [12/30], Step [100/1553], LR 5.1e-04, Loss: 138.1
+Epoch [12/30], Step [200/1553], LR 5.1e-04, Loss: 143.8
+Epoch [12/30], Step [300/1553], LR 5.1e-04, Loss: 175.0
+Epoch [12/30], Step [400/1553], LR 5.0e-04, Loss: 128.5
+Epoch [12/30], Step [500/1553], LR 5.0e-04, Loss: 169.6
+Epoch [12/30], Step [600/1553], LR 5.0e-04, Loss: 171.4
+Epoch [12/30], Step [700/1553], LR 5.0e-04, Loss: 173.7
+Epoch [12/30], Step [800/1553], LR 5.0e-04, Loss: 136.2
+Epoch [12/30], Step [900/1553], LR 5.0e-04, Loss: 188.6
+Epoch [12/30], Step [1000/1553], LR 4.9e-04, Loss: 122.2
+Epoch [12/30], Step [1100/1553], LR 4.9e-04, Loss: 156.6
+Epoch [12/30], Step [1200/1553], LR 4.9e-04, Loss: 174.0
+Epoch [12/30], Step [1300/1553], LR 4.9e-04, Loss: 170.8
+Epoch [12/30], Step [1400/1553], LR 4.9e-04, Loss: 129.5
+Epoch [12/30], Step [1500/1553], LR 4.8e-04, Loss: 140.2
+Prior (train), first 5 classes: tensor([0.0117, 0.0324, 0.0460, 0.0156, 0.0075], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'jacket' 'trousers' 'pole' 'jersey'
+ 'car_(automobile)' 'hat']
+Model saved successfully.
+starting validation
+mAP score regular 60.61, mAP score EMA 62.76
+current_mAP = 62.76, highest_mAP = 65.98
+
+Epoch [13/30], Step [000/1553], LR 4.8e-04, Loss: 105.4
+Epoch [13/30], Step [100/1553], LR 4.8e-04, Loss: 133.7
+Epoch [13/30], Step [200/1553], LR 4.8e-04, Loss: 165.0
+Epoch [13/30], Step [300/1553], LR 4.8e-04, Loss: 149.8
+Epoch [13/30], Step [400/1553], LR 4.7e-04, Loss: 122.4
+Epoch [13/30], Step [500/1553], LR 4.7e-04, Loss: 111.5
+Epoch [13/30], Step [600/1553], LR 4.7e-04, Loss: 148.6
+Epoch [13/30], Step [700/1553], LR 4.7e-04, Loss: 156.3
+Epoch [13/30], Step [800/1553], LR 4.7e-04, Loss: 109.9
+Epoch [13/30], Step [900/1553], LR 4.6e-04, Loss: 150.1
+Epoch [13/30], Step [1000/1553], LR 4.6e-04, Loss: 119.7
+Epoch [13/30], Step [1100/1553], LR 4.6e-04, Loss: 183.6
+Epoch [13/30], Step [1200/1553], LR 4.6e-04, Loss: 104.7
+Epoch [13/30], Step [1300/1553], LR 4.6e-04, Loss: 158.7
+Epoch [13/30], Step [1400/1553], LR 4.5e-04, Loss: 141.4
+Epoch [13/30], Step [1500/1553], LR 4.5e-04, Loss: 201.4
+Prior (train), first 5 classes: tensor([0.0112, 0.0316, 0.0452, 0.0151, 0.0071], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'trousers' 'jacket' 'pole' 'jersey'
+ 'car_(automobile)' 'hat']
+Model saved successfully.
+starting validation
+mAP score regular 60.62, mAP score EMA 62.43
+current_mAP = 62.43, highest_mAP = 65.98
+
+Epoch [14/30], Step [000/1553], LR 4.5e-04, Loss: 151.4
+Epoch [14/30], Step [100/1553], LR 4.5e-04, Loss: 130.4
+Epoch [14/30], Step [200/1553], LR 4.5e-04, Loss: 119.4
+Epoch [14/30], Step [300/1553], LR 4.4e-04, Loss: 126.1
+Epoch [14/30], Step [400/1553], LR 4.4e-04, Loss: 101.8
+Epoch [14/30], Step [500/1553], LR 4.4e-04, Loss: 123.1
+Epoch [14/30], Step [600/1553], LR 4.4e-04, Loss: 143.2
+Epoch [14/30], Step [700/1553], LR 4.3e-04, Loss: 140.2
+Epoch [14/30], Step [800/1553], LR 4.3e-04, Loss: 94.5
+Epoch [14/30], Step [900/1553], LR 4.3e-04, Loss: 109.7
+Epoch [14/30], Step [1000/1553], LR 4.3e-04, Loss: 89.0
+Epoch [14/30], Step [1100/1553], LR 4.3e-04, Loss: 151.4
+Epoch [14/30], Step [1200/1553], LR 4.2e-04, Loss: 128.1
+Epoch [14/30], Step [1300/1553], LR 4.2e-04, Loss: 140.5
+Epoch [14/30], Step [1400/1553], LR 4.2e-04, Loss: 168.0
+Epoch [14/30], Step [1500/1553], LR 4.2e-04, Loss: 68.5
+Prior (train), first 5 classes: tensor([0.0107, 0.0309, 0.0443, 0.0147, 0.0068], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'trousers' 'jacket' 'pole' 'jersey'
+ 'car_(automobile)' 'hat']
+Model saved successfully.
+starting validation
+mAP score regular 60.85, mAP score EMA 62.32
+current_mAP = 62.32, highest_mAP = 65.98
+
+Epoch [15/30], Step [000/1553], LR 4.1e-04, Loss: 100.5
+Epoch [15/30], Step [100/1553], LR 4.1e-04, Loss: 146.6
+Epoch [15/30], Step [200/1553], LR 4.1e-04, Loss: 120.2
+Epoch [15/30], Step [300/1553], LR 4.1e-04, Loss: 129.3
+Epoch [15/30], Step [400/1553], LR 4.1e-04, Loss: 98.8
+Epoch [15/30], Step [500/1553], LR 4.0e-04, Loss: 128.7
+Epoch [15/30], Step [600/1553], LR 4.0e-04, Loss: 143.7
+Epoch [15/30], Step [700/1553], LR 4.0e-04, Loss: 120.8
+Epoch [15/30], Step [800/1553], LR 4.0e-04, Loss: 116.2
+Epoch [15/30], Step [900/1553], LR 3.9e-04, Loss: 113.7
+Epoch [15/30], Step [1000/1553], LR 3.9e-04, Loss: 85.8
+Epoch [15/30], Step [1100/1553], LR 3.9e-04, Loss: 113.1
+Epoch [15/30], Step [1200/1553], LR 3.9e-04, Loss: 167.3
+Epoch [15/30], Step [1300/1553], LR 3.8e-04, Loss: 108.5
+Epoch [15/30], Step [1400/1553], LR 3.8e-04, Loss: 129.3
+Epoch [15/30], Step [1500/1553], LR 3.8e-04, Loss: 126.5
+Prior (train), first 5 classes: tensor([0.0103, 0.0303, 0.0436, 0.0143, 0.0064], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'trousers' 'jacket' 'pole' 'jersey'
+ 'car_(automobile)' 'hat']
+Model saved successfully.
+starting validation
+mAP score regular 60.11, mAP score EMA 62.10
+current_mAP = 62.10, highest_mAP = 65.98
+
+Epoch [16/30], Step [000/1553], LR 3.8e-04, Loss: 88.4
+Epoch [16/30], Step [100/1553], LR 3.8e-04, Loss: 119.4
+Epoch [16/30], Step [200/1553], LR 3.7e-04, Loss: 111.6
+Epoch [16/30], Step [300/1553], LR 3.7e-04, Loss: 133.2
+Epoch [16/30], Step [400/1553], LR 3.7e-04, Loss: 106.7
+Epoch [16/30], Step [500/1553], LR 3.7e-04, Loss: 116.5
+Epoch [16/30], Step [600/1553], LR 3.6e-04, Loss: 81.8
+Epoch [16/30], Step [700/1553], LR 3.6e-04, Loss: 95.1
+Epoch [16/30], Step [800/1553], LR 3.6e-04, Loss: 115.2
+Epoch [16/30], Step [900/1553], LR 3.6e-04, Loss: 56.5
+Epoch [16/30], Step [1000/1553], LR 3.5e-04, Loss: 115.7
+Epoch [16/30], Step [1100/1553], LR 3.5e-04, Loss: 88.3
+Epoch [16/30], Step [1200/1553], LR 3.5e-04, Loss: 81.9
+Epoch [16/30], Step [1300/1553], LR 3.5e-04, Loss: 87.6
+Epoch [16/30], Step [1400/1553], LR 3.4e-04, Loss: 100.8
+Epoch [16/30], Step [1500/1553], LR 3.4e-04, Loss: 92.6
+Prior (train), first 5 classes: tensor([0.0099, 0.0296, 0.0428, 0.0140, 0.0061], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'trousers' 'jacket' 'pole' 'jersey'
+ 'car_(automobile)' 'hat']
+Model saved successfully.
+starting validation
+mAP score regular 60.32, mAP score EMA 61.79
+current_mAP = 61.79, highest_mAP = 65.98
+
+Epoch [17/30], Step [000/1553], LR 3.4e-04, Loss: 88.4
+Epoch [17/30], Step [100/1553], LR 3.4e-04, Loss: 71.3
+Epoch [17/30], Step [200/1553], LR 3.3e-04, Loss: 105.5
+Epoch [17/30], Step [300/1553], LR 3.3e-04, Loss: 80.6
+Epoch [17/30], Step [400/1553], LR 3.3e-04, Loss: 85.2
+Epoch [17/30], Step [500/1553], LR 3.3e-04, Loss: 81.4
+Epoch [17/30], Step [600/1553], LR 3.2e-04, Loss: 106.6
+Epoch [17/30], Step [700/1553], LR 3.2e-04, Loss: 79.1
+Epoch [17/30], Step [800/1553], LR 3.2e-04, Loss: 92.1
+Epoch [17/30], Step [900/1553], LR 3.2e-04, Loss: 67.6
+Epoch [17/30], Step [1000/1553], LR 3.1e-04, Loss: 90.6
+Epoch [17/30], Step [1100/1553], LR 3.1e-04, Loss: 72.4
+Epoch [17/30], Step [1200/1553], LR 3.1e-04, Loss: 83.1
+Epoch [17/30], Step [1300/1553], LR 3.1e-04, Loss: 67.9
+Epoch [17/30], Step [1400/1553], LR 3.0e-04, Loss: 84.5
+Epoch [17/30], Step [1500/1553], LR 3.0e-04, Loss: 113.7
+Prior (train), first 5 classes: tensor([0.0096, 0.0290, 0.0422, 0.0136, 0.0059], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'trousers' 'jacket' 'pole' 'jersey' 'hat'
+ 'car_(automobile)']
+Model saved successfully.
+starting validation
+mAP score regular 60.08, mAP score EMA 61.44
+current_mAP = 61.44, highest_mAP = 65.98
+
+Epoch [18/30], Step [000/1553], LR 3.0e-04, Loss: 91.7
+Epoch [18/30], Step [100/1553], LR 3.0e-04, Loss: 78.3
+Epoch [18/30], Step [200/1553], LR 2.9e-04, Loss: 60.9
+Epoch [18/30], Step [300/1553], LR 2.9e-04, Loss: 78.3
+Epoch [18/30], Step [400/1553], LR 2.9e-04, Loss: 95.0
+Epoch [18/30], Step [500/1553], LR 2.9e-04, Loss: 71.8
+Epoch [18/30], Step [600/1553], LR 2.8e-04, Loss: 56.5
+Epoch [18/30], Step [700/1553], LR 2.8e-04, Loss: 79.7
+Epoch [18/30], Step [800/1553], LR 2.8e-04, Loss: 103.0
+Epoch [18/30], Step [900/1553], LR 2.8e-04, Loss: 83.2
+Epoch [18/30], Step [1000/1553], LR 2.7e-04, Loss: 116.0
+Epoch [18/30], Step [1100/1553], LR 2.7e-04, Loss: 67.2
+Epoch [18/30], Step [1200/1553], LR 2.7e-04, Loss: 61.1
+Epoch [18/30], Step [1300/1553], LR 2.7e-04, Loss: 69.9
+Epoch [18/30], Step [1400/1553], LR 2.6e-04, Loss: 77.1
+Epoch [18/30], Step [1500/1553], LR 2.6e-04, Loss: 107.9
+Prior (train), first 5 classes: tensor([0.0092, 0.0284, 0.0416, 0.0133, 0.0056], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'trousers' 'jacket' 'pole' 'jersey' 'hat'
+ 'car_(automobile)']
+Model saved successfully.
+starting validation
+mAP score regular 59.42, mAP score EMA 61.28
+current_mAP = 61.28, highest_mAP = 65.98
+
+Epoch [19/30], Step [000/1553], LR 2.6e-04, Loss: 103.6
+Epoch [19/30], Step [100/1553], LR 2.6e-04, Loss: 57.9
+Epoch [19/30], Step [200/1553], LR 2.6e-04, Loss: 64.3
+Epoch [19/30], Step [300/1553], LR 2.5e-04, Loss: 99.3
+Epoch [19/30], Step [400/1553], LR 2.5e-04, Loss: 95.9
+Epoch [19/30], Step [500/1553], LR 2.5e-04, Loss: 67.6
+Epoch [19/30], Step [600/1553], LR 2.5e-04, Loss: 89.7
+Epoch [19/30], Step [700/1553], LR 2.4e-04, Loss: 74.6
+Epoch [19/30], Step [800/1553], LR 2.4e-04, Loss: 65.5
+Epoch [19/30], Step [900/1553], LR 2.4e-04, Loss: 84.6
+Epoch [19/30], Step [1000/1553], LR 2.4e-04, Loss: 52.0
+Epoch [19/30], Step [1100/1553], LR 2.3e-04, Loss: 121.7
+Epoch [19/30], Step [1200/1553], LR 2.3e-04, Loss: 61.6
+Epoch [19/30], Step [1300/1553], LR 2.3e-04, Loss: 103.4
+Epoch [19/30], Step [1400/1553], LR 2.3e-04, Loss: 63.2
+Epoch [19/30], Step [1500/1553], LR 2.2e-04, Loss: 73.2
+Prior (train), first 5 classes: tensor([0.0089, 0.0278, 0.0410, 0.0130, 0.0054], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'trousers' 'jacket' 'pole' 'jersey' 'hat'
+ 'car_(automobile)']
+Model saved successfully.
+starting validation
+mAP score regular 59.69, mAP score EMA 61.00
+current_mAP = 61.00, highest_mAP = 65.98
+
+Epoch [20/30], Step [000/1553], LR 2.2e-04, Loss: 61.4
+Epoch [20/30], Step [100/1553], LR 2.2e-04, Loss: 62.8
+Epoch [20/30], Step [200/1553], LR 2.2e-04, Loss: 68.1
+Epoch [20/30], Step [300/1553], LR 2.2e-04, Loss: 65.9
+Epoch [20/30], Step [400/1553], LR 2.1e-04, Loss: 77.2
+Epoch [20/30], Step [500/1553], LR 2.1e-04, Loss: 34.4
+Epoch [20/30], Step [600/1553], LR 2.1e-04, Loss: 56.3
+Epoch [20/30], Step [700/1553], LR 2.1e-04, Loss: 68.8
+Epoch [20/30], Step [800/1553], LR 2.0e-04, Loss: 58.4
+Epoch [20/30], Step [900/1553], LR 2.0e-04, Loss: 57.6
+Epoch [20/30], Step [1000/1553], LR 2.0e-04, Loss: 73.7
+Epoch [20/30], Step [1100/1553], LR 2.0e-04, Loss: 59.1
+Epoch [20/30], Step [1200/1553], LR 1.9e-04, Loss: 64.7
+Epoch [20/30], Step [1300/1553], LR 1.9e-04, Loss: 64.6
+Epoch [20/30], Step [1400/1553], LR 1.9e-04, Loss: 63.5
+Epoch [20/30], Step [1500/1553], LR 1.9e-04, Loss: 79.3
+Prior (train), first 5 classes: tensor([0.0086, 0.0272, 0.0405, 0.0128, 0.0052], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'trousers' 'jacket' 'pole' 'jersey' 'hat'
+ 'shirt']
+Model saved successfully.
+starting validation
+mAP score regular 59.07, mAP score EMA 60.71
+current_mAP = 60.71, highest_mAP = 65.98
+
+Epoch [21/30], Step [000/1553], LR 1.9e-04, Loss: 56.0
+Epoch [21/30], Step [100/1553], LR 1.8e-04, Loss: 43.7
+Epoch [21/30], Step [200/1553], LR 1.8e-04, Loss: 69.2
+Epoch [21/30], Step [300/1553], LR 1.8e-04, Loss: 58.8
+Epoch [21/30], Step [400/1553], LR 1.8e-04, Loss: 53.0
+Epoch [21/30], Step [500/1553], LR 1.7e-04, Loss: 42.2
+Epoch [21/30], Step [600/1553], LR 1.7e-04, Loss: 40.1
+Epoch [21/30], Step [700/1553], LR 1.7e-04, Loss: 43.9
+Epoch [21/30], Step [800/1553], LR 1.7e-04, Loss: 79.3
+Epoch [21/30], Step [900/1553], LR 1.6e-04, Loss: 69.6
+Epoch [21/30], Step [1000/1553], LR 1.6e-04, Loss: 59.3
+Epoch [21/30], Step [1100/1553], LR 1.6e-04, Loss: 56.5
+Epoch [21/30], Step [1200/1553], LR 1.6e-04, Loss: 26.5
+Epoch [21/30], Step [1300/1553], LR 1.6e-04, Loss: 103.3
+Epoch [21/30], Step [1400/1553], LR 1.5e-04, Loss: 65.0
+Epoch [21/30], Step [1500/1553], LR 1.5e-04, Loss: 78.6
+Prior (train), first 5 classes: tensor([0.0083, 0.0267, 0.0400, 0.0125, 0.0050], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'trousers' 'jacket' 'pole' 'jersey'
+ 'shirt' 'hat']
+Model saved successfully.
+starting validation
+mAP score regular 59.15, mAP score EMA 60.36
+current_mAP = 60.36, highest_mAP = 65.98
+
+Epoch [22/30], Step [000/1553], LR 1.5e-04, Loss: 44.0
+Epoch [22/30], Step [100/1553], LR 1.5e-04, Loss: 47.5
+Epoch [22/30], Step [200/1553], LR 1.5e-04, Loss: 59.9
+Epoch [22/30], Step [300/1553], LR 1.4e-04, Loss: 60.3
+Epoch [22/30], Step [400/1553], LR 1.4e-04, Loss: 46.0
+Epoch [22/30], Step [500/1553], LR 1.4e-04, Loss: 42.7
+Epoch [22/30], Step [600/1553], LR 1.4e-04, Loss: 38.0
+Epoch [22/30], Step [700/1553], LR 1.3e-04, Loss: 38.0
+Epoch [22/30], Step [800/1553], LR 1.3e-04, Loss: 56.4
+Epoch [22/30], Step [900/1553], LR 1.3e-04, Loss: 41.3
+Epoch [22/30], Step [1000/1553], LR 1.3e-04, Loss: 62.5
+Epoch [22/30], Step [1100/1553], LR 1.3e-04, Loss: 52.4
+Epoch [22/30], Step [1200/1553], LR 1.2e-04, Loss: 59.9
+Epoch [22/30], Step [1300/1553], LR 1.2e-04, Loss: 76.1
+Epoch [22/30], Step [1400/1553], LR 1.2e-04, Loss: 60.1
+Epoch [22/30], Step [1500/1553], LR 1.2e-04, Loss: 51.8
+Prior (train), first 5 classes: tensor([0.0080, 0.0262, 0.0395, 0.0122, 0.0048], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'trousers' 'jacket' 'pole' 'jersey'
+ 'shirt' 'hat']
+Model saved successfully.
+starting validation
+mAP score regular 59.04, mAP score EMA 60.08
+current_mAP = 60.08, highest_mAP = 65.98
+
+Epoch [23/30], Step [000/1553], LR 1.2e-04, Loss: 19.1
+Epoch [23/30], Step [100/1553], LR 1.2e-04, Loss: 48.0
+Epoch [23/30], Step [200/1553], LR 1.1e-04, Loss: 51.9
+Epoch [23/30], Step [300/1553], LR 1.1e-04, Loss: 38.6
+Epoch [23/30], Step [400/1553], LR 1.1e-04, Loss: 51.5
+Epoch [23/30], Step [500/1553], LR 1.1e-04, Loss: 37.6
+Epoch [23/30], Step [600/1553], LR 1.1e-04, Loss: 45.0
+Epoch [23/30], Step [700/1553], LR 1.0e-04, Loss: 37.4
+Epoch [23/30], Step [800/1553], LR 1.0e-04, Loss: 65.0
+Epoch [23/30], Step [900/1553], LR 1.0e-04, Loss: 29.2
+Epoch [23/30], Step [1000/1553], LR 9.8e-05, Loss: 33.3
+Epoch [23/30], Step [1100/1553], LR 9.6e-05, Loss: 74.2
+Epoch [23/30], Step [1200/1553], LR 9.4e-05, Loss: 62.5
+Epoch [23/30], Step [1300/1553], LR 9.2e-05, Loss: 45.4
+Epoch [23/30], Step [1400/1553], LR 9.1e-05, Loss: 48.5
+Epoch [23/30], Step [1500/1553], LR 8.9e-05, Loss: 48.3
+Prior (train), first 5 classes: tensor([0.0078, 0.0257, 0.0390, 0.0120, 0.0046], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'trousers' 'jacket' 'pole' 'jersey'
+ 'shirt' 'hat']
+Model saved successfully.
+starting validation
+mAP score regular 58.67, mAP score EMA 59.91
+current_mAP = 59.91, highest_mAP = 65.98
+
+Epoch [24/30], Step [000/1553], LR 8.8e-05, Loss: 44.1
+Epoch [24/30], Step [100/1553], LR 8.6e-05, Loss: 29.1
+Epoch [24/30], Step [200/1553], LR 8.4e-05, Loss: 50.1
+Epoch [24/30], Step [300/1553], LR 8.3e-05, Loss: 36.2
+Epoch [24/30], Step [400/1553], LR 8.1e-05, Loss: 35.3
+Epoch [24/30], Step [500/1553], LR 7.9e-05, Loss: 33.7
+Epoch [24/30], Step [600/1553], LR 7.7e-05, Loss: 26.7
+Epoch [24/30], Step [700/1553], LR 7.6e-05, Loss: 56.7
+Epoch [24/30], Step [800/1553], LR 7.4e-05, Loss: 38.3
+Epoch [24/30], Step [900/1553], LR 7.2e-05, Loss: 36.8
+Epoch [24/30], Step [1000/1553], LR 7.1e-05, Loss: 60.1
+Epoch [24/30], Step [1100/1553], LR 6.9e-05, Loss: 50.3
+Epoch [24/30], Step [1200/1553], LR 6.8e-05, Loss: 34.4
+Epoch [24/30], Step [1300/1553], LR 6.6e-05, Loss: 30.9
+Epoch [24/30], Step [1400/1553], LR 6.4e-05, Loss: 28.7
+Epoch [24/30], Step [1500/1553], LR 6.3e-05, Loss: 69.7
+Prior (train), first 5 classes: tensor([0.0076, 0.0253, 0.0387, 0.0118, 0.0045], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'trousers' 'jacket' 'pole' 'jersey'
+ 'shirt' 'hat']
+Model saved successfully.
+starting validation
+mAP score regular 58.92, mAP score EMA 59.65
+current_mAP = 59.65, highest_mAP = 65.98
+
+Epoch [25/30], Step [000/1553], LR 6.2e-05, Loss: 40.7
+Epoch [25/30], Step [100/1553], LR 6.0e-05, Loss: 29.4
+Epoch [25/30], Step [200/1553], LR 5.9e-05, Loss: 38.8
+Epoch [25/30], Step [300/1553], LR 5.7e-05, Loss: 39.0
+Epoch [25/30], Step [400/1553], LR 5.6e-05, Loss: 41.6
+Epoch [25/30], Step [500/1553], LR 5.4e-05, Loss: 24.0
+Epoch [25/30], Step [600/1553], LR 5.3e-05, Loss: 52.4
+Epoch [25/30], Step [700/1553], LR 5.2e-05, Loss: 52.4
+Epoch [25/30], Step [800/1553], LR 5.0e-05, Loss: 40.8
+Epoch [25/30], Step [900/1553], LR 4.9e-05, Loss: 20.4
+Epoch [25/30], Step [1000/1553], LR 4.7e-05, Loss: 49.6
+Epoch [25/30], Step [1100/1553], LR 4.6e-05, Loss: 41.0
+Epoch [25/30], Step [1200/1553], LR 4.5e-05, Loss: 54.2
+Epoch [25/30], Step [1300/1553], LR 4.3e-05, Loss: 57.1
+Epoch [25/30], Step [1400/1553], LR 4.2e-05, Loss: 40.8
+Epoch [25/30], Step [1500/1553], LR 4.1e-05, Loss: 42.9
+Prior (train), first 5 classes: tensor([0.0074, 0.0248, 0.0383, 0.0116, 0.0043], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'trousers' 'jacket' 'pole' 'jersey'
+ 'shirt' 'hat']
+Model saved successfully.
+starting validation
+mAP score regular 58.86, mAP score EMA 59.41
+current_mAP = 59.41, highest_mAP = 65.98
+
+Epoch [26/30], Step [000/1553], LR 4.0e-05, Loss: 28.3
+Epoch [26/30], Step [100/1553], LR 3.9e-05, Loss: 30.2
+Epoch [26/30], Step [200/1553], LR 3.8e-05, Loss: 38.9
+Epoch [26/30], Step [300/1553], LR 3.6e-05, Loss: 35.6
+Epoch [26/30], Step [400/1553], LR 3.5e-05, Loss: 28.0
+Epoch [26/30], Step [500/1553], LR 3.4e-05, Loss: 19.0
+Epoch [26/30], Step [600/1553], LR 3.3e-05, Loss: 52.8
+Epoch [26/30], Step [700/1553], LR 3.2e-05, Loss: 28.6
+Epoch [26/30], Step [800/1553], LR 3.1e-05, Loss: 37.6
+Epoch [26/30], Step [900/1553], LR 3.0e-05, Loss: 39.8
+Epoch [26/30], Step [1000/1553], LR 2.8e-05, Loss: 30.8
+Epoch [26/30], Step [1100/1553], LR 2.7e-05, Loss: 22.9
+Epoch [26/30], Step [1200/1553], LR 2.6e-05, Loss: 19.2
+Epoch [26/30], Step [1300/1553], LR 2.5e-05, Loss: 47.6
+Epoch [26/30], Step [1400/1553], LR 2.4e-05, Loss: 50.8
+Epoch [26/30], Step [1500/1553], LR 2.3e-05, Loss: 35.9
+Prior (train), first 5 classes: tensor([0.0072, 0.0245, 0.0379, 0.0115, 0.0042], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'trousers' 'jacket' 'pole' 'jersey'
+ 'shirt' 'hat']
+Model saved successfully.
+starting validation
+mAP score regular 58.77, mAP score EMA 59.25
+current_mAP = 59.25, highest_mAP = 65.98
+
+Epoch [27/30], Step [000/1553], LR 2.3e-05, Loss: 44.1
+Epoch [27/30], Step [100/1553], LR 2.2e-05, Loss: 23.7
+Epoch [27/30], Step [200/1553], LR 2.1e-05, Loss: 57.7
+Epoch [27/30], Step [300/1553], LR 2.0e-05, Loss: 24.0
+Epoch [27/30], Step [400/1553], LR 1.9e-05, Loss: 47.8
+Epoch [27/30], Step [500/1553], LR 1.8e-05, Loss: 26.5
+Epoch [27/30], Step [600/1553], LR 1.7e-05, Loss: 51.3
+Epoch [27/30], Step [700/1553], LR 1.7e-05, Loss: 20.5
+Epoch [27/30], Step [800/1553], LR 1.6e-05, Loss: 47.3
+Epoch [27/30], Step [900/1553], LR 1.5e-05, Loss: 42.9
+Epoch [27/30], Step [1000/1553], LR 1.4e-05, Loss: 32.2
+Epoch [27/30], Step [1100/1553], LR 1.3e-05, Loss: 18.7
+Epoch [27/30], Step [1200/1553], LR 1.3e-05, Loss: 25.3
+Epoch [27/30], Step [1300/1553], LR 1.2e-05, Loss: 36.3
+Epoch [27/30], Step [1400/1553], LR 1.1e-05, Loss: 31.6
+Epoch [27/30], Step [1500/1553], LR 1.1e-05, Loss: 35.0
+Prior (train), first 5 classes: tensor([0.0070, 0.0241, 0.0376, 0.0113, 0.0041], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'trousers' 'jacket' 'pole' 'shirt'
+ 'jersey' 'hat']
+Model saved successfully.
+starting validation
+mAP score regular 58.74, mAP score EMA 59.18
+current_mAP = 59.18, highest_mAP = 65.98
+
+Epoch [28/30], Step [000/1553], LR 1.0e-05, Loss: 31.4
+Epoch [28/30], Step [100/1553], LR 9.6e-06, Loss: 25.1
+Epoch [28/30], Step [200/1553], LR 8.9e-06, Loss: 35.1
+Epoch [28/30], Step [300/1553], LR 8.3e-06, Loss: 30.9
+Epoch [28/30], Step [400/1553], LR 7.8e-06, Loss: 58.3
+Epoch [28/30], Step [500/1553], LR 7.2e-06, Loss: 26.0
+Epoch [28/30], Step [600/1553], LR 6.7e-06, Loss: 41.5
+Epoch [28/30], Step [700/1553], LR 6.1e-06, Loss: 38.7
+Epoch [28/30], Step [800/1553], LR 5.6e-06, Loss: 26.2
+Epoch [28/30], Step [900/1553], LR 5.2e-06, Loss: 32.3
+Epoch [28/30], Step [1000/1553], LR 4.7e-06, Loss: 24.4
+Epoch [28/30], Step [1100/1553], LR 4.3e-06, Loss: 36.6
+Epoch [28/30], Step [1200/1553], LR 3.9e-06, Loss: 36.7
+Epoch [28/30], Step [1300/1553], LR 3.5e-06, Loss: 42.3
+Epoch [28/30], Step [1400/1553], LR 3.1e-06, Loss: 35.4
+Epoch [28/30], Step [1500/1553], LR 2.7e-06, Loss: 11.2
+Prior (train), first 5 classes: tensor([0.0068, 0.0238, 0.0373, 0.0111, 0.0039], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'trousers' 'jacket' 'pole' 'shirt'
+ 'jersey' 'hat']
+Model saved successfully.
+starting validation
+mAP score regular 58.61, mAP score EMA 59.02
+current_mAP = 59.02, highest_mAP = 65.98
+
+Epoch [29/30], Step [000/1553], LR 2.6e-06, Loss: 17.1
+Epoch [29/30], Step [100/1553], LR 2.2e-06, Loss: 39.0
+Epoch [29/30], Step [200/1553], LR 1.9e-06, Loss: 17.1
+Epoch [29/30], Step [300/1553], LR 1.7e-06, Loss: 17.6
+Epoch [29/30], Step [400/1553], LR 1.4e-06, Loss: 53.3
+Epoch [29/30], Step [500/1553], LR 1.2e-06, Loss: 37.1
+Epoch [29/30], Step [600/1553], LR 9.7e-07, Loss: 33.4
+Epoch [29/30], Step [700/1553], LR 7.7e-07, Loss: 42.6
+Epoch [29/30], Step [800/1553], LR 6.0e-07, Loss: 35.2
+Epoch [29/30], Step [900/1553], LR 4.5e-07, Loss: 26.9
+Epoch [29/30], Step [1000/1553], LR 3.3e-07, Loss: 22.8
+Epoch [29/30], Step [1100/1553], LR 2.2e-07, Loss: 38.4
+Epoch [29/30], Step [1200/1553], LR 1.3e-07, Loss: 32.5
+Epoch [29/30], Step [1300/1553], LR 7.0e-08, Loss: 48.4
+Epoch [29/30], Step [1400/1553], LR 2.7e-08, Loss: 49.2
+Epoch [29/30], Step [1500/1553], LR 5.2e-09, Loss: 33.6
+Prior (train), first 5 classes: tensor([0.0066, 0.0234, 0.0370, 0.0110, 0.0038], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'handle' 'trousers' 'jacket' 'pole' 'shirt'
+ 'jersey' 'hat']
+Model saved successfully.
+starting validation
+mAP score regular 58.58, mAP score EMA 58.82
+current_mAP = 58.82, highest_mAP = 65.98
+

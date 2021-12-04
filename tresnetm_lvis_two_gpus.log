@@ -1,0 +1,955 @@
+/home/ubuntu/anaconda3/envs/th1.9/lib/python3.8/site-packages/torch/distributed/launch.py:178: FutureWarning: The module torch.distributed.launch is deprecated
+and will be removed in future. Use torch.distributed.run.
+Note that --use_env is set by default in torch.distributed.run.
+If your script expects `--local_rank` argument to be set, please
+change it to read from `os.environ['LOCAL_RANK']` instead. See 
+https://pytorch.org/docs/stable/distributed.html#launch-utility for 
+further instructions
+
+  warnings.warn(
+WARNING:torch.distributed.run:*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+world size: 2, world rank: 0, local rank: 0
+os.environ: environ({'CUDA_VISIBLE_DEVICES': '2,3', 'SHELL': '/bin/bash', 'CONDA_EXE': '/home/ubuntu/anaconda3/bin/conda', '_CE_M': '', 'TMUX': '/tmp/tmux-1000/default,16461,67', 'LANGUAGE': 'zh_CN:zh', 'SSH_AUTH_SOCK': '/tmp/ssh-ZZ0QUoEQDb/agent.2294811', 'PWD': '/data/dongbowen/partial_label/PartialLabelingCSL', 'LOGNAME': 'ubuntu', 'XDG_SESSION_TYPE': 'tty', 'CONDA_PREFIX': '/home/ubuntu/anaconda3/envs/th1.9', 'MOTD_SHOWN': 'pam', 'HOME': '/home/ubuntu', 'LANG': 'zh_CN.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'CONDA_PROMPT_MODIFIER': '(th1.9) ', 'SSH_CONNECTION': '172.17.248.99 5633 192.168.1.149 22', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'XDG_SESSION_CLASS': 'user', 'TERM': 'screen', '_CE_CONDA': '', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ubuntu', 'TMUX_PANE': '%84', 'CONDA_SHLVL': '5', 'DISPLAY': 'localhost:11.0', 'SHLVL': '2', 'XDG_SESSION_ID': '42', 'CONDA_PYTHON_EXE': '/home/ubuntu/anaconda3/bin/python', 'LD_LIBRARY_PATH': ':/usr/local/cuda/lib64:/usr/local/cuda/lib64', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSH_CLIENT': '172.17.238.6 59474 22', 'CONDA_DEFAULT_ENV': 'th1.9', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PATH': '/home/ubuntu/anaconda3/envs/th1.9/bin:/home/ubuntu/anaconda3/bin:/home/ubuntu/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/cuda/bin:/usr/local/cuda/bin', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'SSH_TTY': '/dev/pts/0', 'CONDA_PREFIX_1': '/home/ubuntu/anaconda3', 'CONDA_PREFIX_2': '/home/ubuntu/anaconda3/envs/th1.9', 'CONDA_PREFIX_3': '/home/ubuntu/anaconda3/envs/detr', 'CONDA_PREFIX_4': '/home/ubuntu/anaconda3', '_': '/home/ubuntu/anaconda3/envs/th1.9/bin/python', 'OMP_NUM_THREADS': '1', 'LOCAL_RANK': '0', 'RANK': '0', 'GROUP_RANK': '0', 'ROLE_RANK': '0', 'ROLE_NAME': 'default', 'LOCAL_WORLD_SIZE': '2', 'WORLD_SIZE': '2', 'GROUP_WORLD_SIZE': '1', 'ROLE_WORLD_SIZE': '2', 'MASTER_ADDR': '127.0.0.1', 'MASTER_PORT': '34567', 'TORCHELASTIC_RESTART_COUNT': '0', 'TORCHELASTIC_MAX_RESTARTS': '0', 'TORCHELASTIC_RUN_ID': 'none', 'TORCHELASTIC_USE_AGENT_STORE': 'True', 'NCCL_ASYNC_ERROR_HANDLING': '1', 'TORCHELASTIC_ERROR_FILE': '/tmp/torchelastic_vj70k752/none_1b27pjti/attempt_0/0/error.json', 'QT_QPA_PLATFORM_PLUGIN_PATH': '/home/ubuntu/anaconda3/envs/th1.9/lib/python3.8/site-packages/cv2/qt/plugins', 'QT_QPA_FONTDIR': '/home/ubuntu/anaconda3/envs/th1.9/lib/python3.8/site-packages/cv2/qt/fonts'})
+world size: 2, world rank: 1, local rank: 1
+os.environ: environ({'CUDA_VISIBLE_DEVICES': '2,3', 'SHELL': '/bin/bash', 'CONDA_EXE': '/home/ubuntu/anaconda3/bin/conda', '_CE_M': '', 'TMUX': '/tmp/tmux-1000/default,16461,67', 'LANGUAGE': 'zh_CN:zh', 'SSH_AUTH_SOCK': '/tmp/ssh-ZZ0QUoEQDb/agent.2294811', 'PWD': '/data/dongbowen/partial_label/PartialLabelingCSL', 'LOGNAME': 'ubuntu', 'XDG_SESSION_TYPE': 'tty', 'CONDA_PREFIX': '/home/ubuntu/anaconda3/envs/th1.9', 'MOTD_SHOWN': 'pam', 'HOME': '/home/ubuntu', 'LANG': 'zh_CN.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'CONDA_PROMPT_MODIFIER': '(th1.9) ', 'SSH_CONNECTION': '172.17.248.99 5633 192.168.1.149 22', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'XDG_SESSION_CLASS': 'user', 'TERM': 'screen', '_CE_CONDA': '', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ubuntu', 'TMUX_PANE': '%84', 'CONDA_SHLVL': '5', 'DISPLAY': 'localhost:11.0', 'SHLVL': '2', 'XDG_SESSION_ID': '42', 'CONDA_PYTHON_EXE': '/home/ubuntu/anaconda3/bin/python', 'LD_LIBRARY_PATH': ':/usr/local/cuda/lib64:/usr/local/cuda/lib64', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSH_CLIENT': '172.17.238.6 59474 22', 'CONDA_DEFAULT_ENV': 'th1.9', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PATH': '/home/ubuntu/anaconda3/envs/th1.9/bin:/home/ubuntu/anaconda3/bin:/home/ubuntu/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/cuda/bin:/usr/local/cuda/bin', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'SSH_TTY': '/dev/pts/0', 'CONDA_PREFIX_1': '/home/ubuntu/anaconda3', 'CONDA_PREFIX_2': '/home/ubuntu/anaconda3/envs/th1.9', 'CONDA_PREFIX_3': '/home/ubuntu/anaconda3/envs/detr', 'CONDA_PREFIX_4': '/home/ubuntu/anaconda3', '_': '/home/ubuntu/anaconda3/envs/th1.9/bin/python', 'OMP_NUM_THREADS': '1', 'LOCAL_RANK': '1', 'RANK': '1', 'GROUP_RANK': '0', 'ROLE_RANK': '1', 'ROLE_NAME': 'default', 'LOCAL_WORLD_SIZE': '2', 'WORLD_SIZE': '2', 'GROUP_WORLD_SIZE': '1', 'ROLE_WORLD_SIZE': '2', 'MASTER_ADDR': '127.0.0.1', 'MASTER_PORT': '34567', 'TORCHELASTIC_RESTART_COUNT': '0', 'TORCHELASTIC_MAX_RESTARTS': '0', 'TORCHELASTIC_RUN_ID': 'none', 'TORCHELASTIC_USE_AGENT_STORE': 'True', 'NCCL_ASYNC_ERROR_HANDLING': '1', 'TORCHELASTIC_ERROR_FILE': '/tmp/torchelastic_vj70k752/none_1b27pjti/attempt_0/1/error.json', 'QT_QPA_PLATFORM_PLUGIN_PATH': '/home/ubuntu/anaconda3/envs/th1.9/lib/python3.8/site-packages/cv2/qt/plugins', 'QT_QPA_FONTDIR': '/home/ubuntu/anaconda3/envs/th1.9/lib/python3.8/site-packages/cv2/qt/fonts'})
+| distributed init (local_rank 0): env://
+| distributed init (local_rank 1): env://
+[W ProcessGroupNCCL.cpp:1569] Rank 0 using best-guess GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device.
+[W ProcessGroupNCCL.cpp:1569] Rank 1 using best-guess GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device.
+creating model...
+creating model...
+dict_keys(['body.conv1.0.weight', 'body.conv1.1.weight', 'body.conv1.1.bias', 'body.conv1.1.running_mean', 'body.conv1.1.running_var', 'body.layer1.0.conv1.0.weight', 'body.layer1.0.conv1.1.weight', 'body.layer1.0.conv1.1.bias', 'body.layer1.0.conv1.1.running_mean', 'body.layer1.0.conv1.1.running_var', 'body.layer1.0.conv2.0.weight', 'body.layer1.0.conv2.1.weight', 'body.layer1.0.conv2.1.bias', 'body.layer1.0.conv2.1.running_mean', 'body.layer1.0.conv2.1.running_var', 'body.layer1.0.se.fc1.weight', 'body.layer1.0.se.fc1.bias', 'body.layer1.0.se.fc2.weight', 'body.layer1.0.se.fc2.bias', 'body.layer1.1.conv1.0.weight', 'body.layer1.1.conv1.1.weight', 'body.layer1.1.conv1.1.bias', 'body.layer1.1.conv1.1.running_mean', 'body.layer1.1.conv1.1.running_var', 'body.layer1.1.conv2.0.weight', 'body.layer1.1.conv2.1.weight', 'body.layer1.1.conv2.1.bias', 'body.layer1.1.conv2.1.running_mean', 'body.layer1.1.conv2.1.running_var', 'body.layer1.1.se.fc1.weight', 'body.layer1.1.se.fc1.bias', 'body.layer1.1.se.fc2.weight', 'body.layer1.1.se.fc2.bias', 'body.layer1.2.conv1.0.weight', 'body.layer1.2.conv1.1.weight', 'body.layer1.2.conv1.1.bias', 'body.layer1.2.conv1.1.running_mean', 'body.layer1.2.conv1.1.running_var', 'body.layer1.2.conv2.0.weight', 'body.layer1.2.conv2.1.weight', 'body.layer1.2.conv2.1.bias', 'body.layer1.2.conv2.1.running_mean', 'body.layer1.2.conv2.1.running_var', 'body.layer1.2.se.fc1.weight', 'body.layer1.2.se.fc1.bias', 'body.layer1.2.se.fc2.weight', 'body.layer1.2.se.fc2.bias', 'body.layer2.0.conv1.0.0.weight', 'body.layer2.0.conv1.0.1.weight', 'body.layer2.0.conv1.0.1.bias', 'body.layer2.0.conv1.0.1.running_mean', 'body.layer2.0.conv1.0.1.running_var', 'body.layer2.0.conv2.0.weight', 'body.layer2.0.conv2.1.weight', 'body.layer2.0.conv2.1.bias', 'body.layer2.0.conv2.1.running_mean', 'body.layer2.0.conv2.1.running_var', 'body.layer2.0.downsample.1.0.weight', 'body.layer2.0.downsample.1.1.weight', 'body.layer2.0.downsample.1.1.bias', 'body.layer2.0.downsample.1.1.running_mean', 'body.layer2.0.downsample.1.1.running_var', 'body.layer2.0.se.fc1.weight', 'body.layer2.0.se.fc1.bias', 'body.layer2.0.se.fc2.weight', 'body.layer2.0.se.fc2.bias', 'body.layer2.1.conv1.0.weight', 'body.layer2.1.conv1.1.weight', 'body.layer2.1.conv1.1.bias', 'body.layer2.1.conv1.1.running_mean', 'body.layer2.1.conv1.1.running_var', 'body.layer2.1.conv2.0.weight', 'body.layer2.1.conv2.1.weight', 'body.layer2.1.conv2.1.bias', 'body.layer2.1.conv2.1.running_mean', 'body.layer2.1.conv2.1.running_var', 'body.layer2.1.se.fc1.weight', 'body.layer2.1.se.fc1.bias', 'body.layer2.1.se.fc2.weight', 'body.layer2.1.se.fc2.bias', 'body.layer2.2.conv1.0.weight', 'body.layer2.2.conv1.1.weight', 'body.layer2.2.conv1.1.bias', 'body.layer2.2.conv1.1.running_mean', 'body.layer2.2.conv1.1.running_var', 'body.layer2.2.conv2.0.weight', 'body.layer2.2.conv2.1.weight', 'body.layer2.2.conv2.1.bias', 'body.layer2.2.conv2.1.running_mean', 'body.layer2.2.conv2.1.running_var', 'body.layer2.2.se.fc1.weight', 'body.layer2.2.se.fc1.bias', 'body.layer2.2.se.fc2.weight', 'body.layer2.2.se.fc2.bias', 'body.layer2.3.conv1.0.weight', 'body.layer2.3.conv1.1.weight', 'body.layer2.3.conv1.1.bias', 'body.layer2.3.conv1.1.running_mean', 'body.layer2.3.conv1.1.running_var', 'body.layer2.3.conv2.0.weight', 'body.layer2.3.conv2.1.weight', 'body.layer2.3.conv2.1.bias', 'body.layer2.3.conv2.1.running_mean', 'body.layer2.3.conv2.1.running_var', 'body.layer2.3.se.fc1.weight', 'body.layer2.3.se.fc1.bias', 'body.layer2.3.se.fc2.weight', 'body.layer2.3.se.fc2.bias', 'body.layer3.0.conv1.0.weight', 'body.layer3.0.conv1.1.weight', 'body.layer3.0.conv1.1.bias', 'body.layer3.0.conv1.1.running_mean', 'body.layer3.0.conv1.1.running_var', 'body.layer3.0.conv2.0.0.weight', 'body.layer3.0.conv2.0.1.weight', 'body.layer3.0.conv2.0.1.bias', 'body.layer3.0.conv2.0.1.running_mean', 'body.layer3.0.conv2.0.1.running_var', 'body.layer3.0.conv3.0.weight', 'body.layer3.0.conv3.1.weight', 'body.layer3.0.conv3.1.bias', 'body.layer3.0.conv3.1.running_mean', 'body.layer3.0.conv3.1.running_var', 'body.layer3.0.downsample.1.0.weight', 'body.layer3.0.downsample.1.1.weight', 'body.layer3.0.downsample.1.1.bias', 'body.layer3.0.downsample.1.1.running_mean', 'body.layer3.0.downsample.1.1.running_var', 'body.layer3.0.se.fc1.weight', 'body.layer3.0.se.fc1.bias', 'body.layer3.0.se.fc2.weight', 'body.layer3.0.se.fc2.bias', 'body.layer3.1.conv1.0.weight', 'body.layer3.1.conv1.1.weight', 'body.layer3.1.conv1.1.bias', 'body.layer3.1.conv1.1.running_mean', 'body.layer3.1.conv1.1.running_var', 'body.layer3.1.conv2.0.weight', 'body.layer3.1.conv2.1.weight', 'body.layer3.1.conv2.1.bias', 'body.layer3.1.conv2.1.running_mean', 'body.layer3.1.conv2.1.running_var', 'body.layer3.1.conv3.0.weight', 'body.layer3.1.conv3.1.weight', 'body.layer3.1.conv3.1.bias', 'body.layer3.1.conv3.1.running_mean', 'body.layer3.1.conv3.1.running_var', 'body.layer3.1.se.fc1.weight', 'body.layer3.1.se.fc1.bias', 'body.layer3.1.se.fc2.weight', 'body.layer3.1.se.fc2.bias', 'body.layer3.2.conv1.0.weight', 'body.layer3.2.conv1.1.weight', 'body.layer3.2.conv1.1.bias', 'body.layer3.2.conv1.1.running_mean', 'body.layer3.2.conv1.1.running_var', 'body.layer3.2.conv2.0.weight', 'body.layer3.2.conv2.1.weight', 'body.layer3.2.conv2.1.bias', 'body.layer3.2.conv2.1.running_mean', 'body.layer3.2.conv2.1.running_var', 'body.layer3.2.conv3.0.weight', 'body.layer3.2.conv3.1.weight', 'body.layer3.2.conv3.1.bias', 'body.layer3.2.conv3.1.running_mean', 'body.layer3.2.conv3.1.running_var', 'body.layer3.2.se.fc1.weight', 'body.layer3.2.se.fc1.bias', 'body.layer3.2.se.fc2.weight', 'body.layer3.2.se.fc2.bias', 'body.layer3.3.conv1.0.weight', 'body.layer3.3.conv1.1.weight', 'body.layer3.3.conv1.1.bias', 'body.layer3.3.conv1.1.running_mean', 'body.layer3.3.conv1.1.running_var', 'body.layer3.3.conv2.0.weight', 'body.layer3.3.conv2.1.weight', 'body.layer3.3.conv2.1.bias', 'body.layer3.3.conv2.1.running_mean', 'body.layer3.3.conv2.1.running_var', 'body.layer3.3.conv3.0.weight', 'body.layer3.3.conv3.1.weight', 'body.layer3.3.conv3.1.bias', 'body.layer3.3.conv3.1.running_mean', 'body.layer3.3.conv3.1.running_var', 'body.layer3.3.se.fc1.weight', 'body.layer3.3.se.fc1.bias', 'body.layer3.3.se.fc2.weight', 'body.layer3.3.se.fc2.bias', 'body.layer3.4.conv1.0.weight', 'body.layer3.4.conv1.1.weight', 'body.layer3.4.conv1.1.bias', 'body.layer3.4.conv1.1.running_mean', 'body.layer3.4.conv1.1.running_var', 'body.layer3.4.conv2.0.weight', 'body.layer3.4.conv2.1.weight', 'body.layer3.4.conv2.1.bias', 'body.layer3.4.conv2.1.running_mean', 'body.layer3.4.conv2.1.running_var', 'body.layer3.4.conv3.0.weight', 'body.layer3.4.conv3.1.weight', 'body.layer3.4.conv3.1.bias', 'body.layer3.4.conv3.1.running_mean', 'body.layer3.4.conv3.1.running_var', 'body.layer3.4.se.fc1.weight', 'body.layer3.4.se.fc1.bias', 'body.layer3.4.se.fc2.weight', 'body.layer3.4.se.fc2.bias', 'body.layer3.5.conv1.0.weight', 'body.layer3.5.conv1.1.weight', 'body.layer3.5.conv1.1.bias', 'body.layer3.5.conv1.1.running_mean', 'body.layer3.5.conv1.1.running_var', 'body.layer3.5.conv2.0.weight', 'body.layer3.5.conv2.1.weight', 'body.layer3.5.conv2.1.bias', 'body.layer3.5.conv2.1.running_mean', 'body.layer3.5.conv2.1.running_var', 'body.layer3.5.conv3.0.weight', 'body.layer3.5.conv3.1.weight', 'body.layer3.5.conv3.1.bias', 'body.layer3.5.conv3.1.running_mean', 'body.layer3.5.conv3.1.running_var', 'body.layer3.5.se.fc1.weight', 'body.layer3.5.se.fc1.bias', 'body.layer3.5.se.fc2.weight', 'body.layer3.5.se.fc2.bias', 'body.layer3.6.conv1.0.weight', 'body.layer3.6.conv1.1.weight', 'body.layer3.6.conv1.1.bias', 'body.layer3.6.conv1.1.running_mean', 'body.layer3.6.conv1.1.running_var', 'body.layer3.6.conv2.0.weight', 'body.layer3.6.conv2.1.weight', 'body.layer3.6.conv2.1.bias', 'body.layer3.6.conv2.1.running_mean', 'body.layer3.6.conv2.1.running_var', 'body.layer3.6.conv3.0.weight', 'body.layer3.6.conv3.1.weight', 'body.layer3.6.conv3.1.bias', 'body.layer3.6.conv3.1.running_mean', 'body.layer3.6.conv3.1.running_var', 'body.layer3.6.se.fc1.weight', 'body.layer3.6.se.fc1.bias', 'body.layer3.6.se.fc2.weight', 'body.layer3.6.se.fc2.bias', 'body.layer3.7.conv1.0.weight', 'body.layer3.7.conv1.1.weight', 'body.layer3.7.conv1.1.bias', 'body.layer3.7.conv1.1.running_mean', 'body.layer3.7.conv1.1.running_var', 'body.layer3.7.conv2.0.weight', 'body.layer3.7.conv2.1.weight', 'body.layer3.7.conv2.1.bias', 'body.layer3.7.conv2.1.running_mean', 'body.layer3.7.conv2.1.running_var', 'body.layer3.7.conv3.0.weight', 'body.layer3.7.conv3.1.weight', 'body.layer3.7.conv3.1.bias', 'body.layer3.7.conv3.1.running_mean', 'body.layer3.7.conv3.1.running_var', 'body.layer3.7.se.fc1.weight', 'body.layer3.7.se.fc1.bias', 'body.layer3.7.se.fc2.weight', 'body.layer3.7.se.fc2.bias', 'body.layer3.8.conv1.0.weight', 'body.layer3.8.conv1.1.weight', 'body.layer3.8.conv1.1.bias', 'body.layer3.8.conv1.1.running_mean', 'body.layer3.8.conv1.1.running_var', 'body.layer3.8.conv2.0.weight', 'body.layer3.8.conv2.1.weight', 'body.layer3.8.conv2.1.bias', 'body.layer3.8.conv2.1.running_mean', 'body.layer3.8.conv2.1.running_var', 'body.layer3.8.conv3.0.weight', 'body.layer3.8.conv3.1.weight', 'body.layer3.8.conv3.1.bias', 'body.layer3.8.conv3.1.running_mean', 'body.layer3.8.conv3.1.running_var', 'body.layer3.8.se.fc1.weight', 'body.layer3.8.se.fc1.bias', 'body.layer3.8.se.fc2.weight', 'body.layer3.8.se.fc2.bias', 'body.layer3.9.conv1.0.weight', 'body.layer3.9.conv1.1.weight', 'body.layer3.9.conv1.1.bias', 'body.layer3.9.conv1.1.running_mean', 'body.layer3.9.conv1.1.running_var', 'body.layer3.9.conv2.0.weight', 'body.layer3.9.conv2.1.weight', 'body.layer3.9.conv2.1.bias', 'body.layer3.9.conv2.1.running_mean', 'body.layer3.9.conv2.1.running_var', 'body.layer3.9.conv3.0.weight', 'body.layer3.9.conv3.1.weight', 'body.layer3.9.conv3.1.bias', 'body.layer3.9.conv3.1.running_mean', 'body.layer3.9.conv3.1.running_var', 'body.layer3.9.se.fc1.weight', 'body.layer3.9.se.fc1.bias', 'body.layer3.9.se.fc2.weight', 'body.layer3.9.se.fc2.bias', 'body.layer3.10.conv1.0.weight', 'body.layer3.10.conv1.1.weight', 'body.layer3.10.conv1.1.bias', 'body.layer3.10.conv1.1.running_mean', 'body.layer3.10.conv1.1.running_var', 'body.layer3.10.conv2.0.weight', 'body.layer3.10.conv2.1.weight', 'body.layer3.10.conv2.1.bias', 'body.layer3.10.conv2.1.running_mean', 'body.layer3.10.conv2.1.running_var', 'body.layer3.10.conv3.0.weight', 'body.layer3.10.conv3.1.weight', 'body.layer3.10.conv3.1.bias', 'body.layer3.10.conv3.1.running_mean', 'body.layer3.10.conv3.1.running_var', 'body.layer3.10.se.fc1.weight', 'body.layer3.10.se.fc1.bias', 'body.layer3.10.se.fc2.weight', 'body.layer3.10.se.fc2.bias', 'body.layer4.0.conv1.0.weight', 'body.layer4.0.conv1.1.weight', 'body.layer4.0.conv1.1.bias', 'body.layer4.0.conv1.1.running_mean', 'body.layer4.0.conv1.1.running_var', 'body.layer4.0.conv2.0.0.weight', 'body.layer4.0.conv2.0.1.weight', 'body.layer4.0.conv2.0.1.bias', 'body.layer4.0.conv2.0.1.running_mean', 'body.layer4.0.conv2.0.1.running_var', 'body.layer4.0.conv3.0.weight', 'body.layer4.0.conv3.1.weight', 'body.layer4.0.conv3.1.bias', 'body.layer4.0.conv3.1.running_mean', 'body.layer4.0.conv3.1.running_var', 'body.layer4.0.downsample.1.0.weight', 'body.layer4.0.downsample.1.1.weight', 'body.layer4.0.downsample.1.1.bias', 'body.layer4.0.downsample.1.1.running_mean', 'body.layer4.0.downsample.1.1.running_var', 'body.layer4.1.conv1.0.weight', 'body.layer4.1.conv1.1.weight', 'body.layer4.1.conv1.1.bias', 'body.layer4.1.conv1.1.running_mean', 'body.layer4.1.conv1.1.running_var', 'body.layer4.1.conv2.0.weight', 'body.layer4.1.conv2.1.weight', 'body.layer4.1.conv2.1.bias', 'body.layer4.1.conv2.1.running_mean', 'body.layer4.1.conv2.1.running_var', 'body.layer4.1.conv3.0.weight', 'body.layer4.1.conv3.1.weight', 'body.layer4.1.conv3.1.bias', 'body.layer4.1.conv3.1.running_mean', 'body.layer4.1.conv3.1.running_var', 'body.layer4.2.conv1.0.weight', 'body.layer4.2.conv1.1.weight', 'body.layer4.2.conv1.1.bias', 'body.layer4.2.conv1.1.running_mean', 'body.layer4.2.conv1.1.running_var', 'body.layer4.2.conv2.0.weight', 'body.layer4.2.conv2.1.weight', 'body.layer4.2.conv2.1.bias', 'body.layer4.2.conv2.1.running_mean', 'body.layer4.2.conv2.1.running_var', 'body.layer4.2.conv3.0.weight', 'body.layer4.2.conv3.1.weight', 'body.layer4.2.conv3.1.bias', 'body.layer4.2.conv3.1.running_mean', 'body.layer4.2.conv3.1.running_var'])
+done
+
+loading annotations into memory...
+done
+
+loading annotations into memory...
+Done (t=6.48s)
+creating index...
+Done (t=6.53s)
+creating index...
+index created!
+index created!
+loading annotations into memory...
+loading annotations into memory...
+Done (t=38.93s)
+creating index...
+Done (t=39.17s)
+creating index...
+index created!
+index created!
+len(val_dataset)):  19626
+len(train_dataset)):  99388
+Used parameters:
+Image_size: 448
+Learning_rate: 0.0006
+Epochs: 30
+len(val_dataset)):  19626
+len(train_dataset)):  99388
+Used parameters:
+Image_size: 448
+Learning_rate: 0.0006
+Epochs: 30
+Epoch [0/30], Step [000/1553], LR 2.4e-05, Loss: 13523.6
+Epoch [0/30], Step [100/1553], LR 2.4e-05, Loss: 962.5
+Epoch [0/30], Step [200/1553], LR 2.5e-05, Loss: 504.7
+Epoch [0/30], Step [300/1553], LR 2.5e-05, Loss: 407.2
+Epoch [0/30], Step [400/1553], LR 2.7e-05, Loss: 323.3
+Epoch [0/30], Step [500/1553], LR 2.8e-05, Loss: 357.8
+Epoch [0/30], Step [600/1553], LR 3.0e-05, Loss: 273.2
+Epoch [0/30], Step [700/1553], LR 3.2e-05, Loss: 341.4
+Epoch [0/30], Step [800/1553], LR 3.4e-05, Loss: 370.8
+Epoch [0/30], Step [900/1553], LR 3.7e-05, Loss: 273.8
+Epoch [0/30], Step [1000/1553], LR 4.0e-05, Loss: 236.5
+Epoch [0/30], Step [1100/1553], LR 4.4e-05, Loss: 305.4
+Epoch [0/30], Step [1200/1553], LR 4.7e-05, Loss: 248.9
+Epoch [0/30], Step [1300/1553], LR 5.1e-05, Loss: 212.9
+Epoch [0/30], Step [1400/1553], LR 5.6e-05, Loss: 249.5
+Epoch [0/30], Step [1500/1553], LR 6.0e-05, Loss: 228.0
+Prior (train), first 5 classes: tensor([0.0468, 0.0666, 0.1196, 0.0451, 0.0396], device='cuda:0')
+Prior (train), first 10 classes: ['table' 'mirror' 'bowl' 'person' 'wheel' 'knife'
+ 'glass_(drink_container)' 'shoe' 'car_(automobile)' 'curtain']
+Prior (train), first 5 classes: tensor([0.0468, 0.0666, 0.1196, 0.0451, 0.0396], device='cuda:1')
+Prior (train), first 10 classes: ['table' 'mirror' 'bowl' 'person' 'wheel' 'knife'
+ 'glass_(drink_container)' 'shoe' 'car_(automobile)' 'curtain']
+starting validation
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 42.52, mAP score EMA 17.58
+current_mAP = 42.52, highest_mAP = 42.52
+
+current_mAP = 42.52, highest_mAP = 42.52
+
+Epoch [1/30], Step [000/1553], LR 6.3e-05, Loss: 183.5
+Epoch [1/30], Step [100/1553], LR 6.8e-05, Loss: 271.2
+Epoch [1/30], Step [200/1553], LR 7.3e-05, Loss: 214.8
+Epoch [1/30], Step [300/1553], LR 7.8e-05, Loss: 212.1
+Epoch [1/30], Step [400/1553], LR 8.4e-05, Loss: 235.7
+Epoch [1/30], Step [500/1553], LR 9.0e-05, Loss: 172.7
+Epoch [1/30], Step [600/1553], LR 9.7e-05, Loss: 233.0
+Epoch [1/30], Step [700/1553], LR 1.0e-04, Loss: 235.7
+Epoch [1/30], Step [800/1553], LR 1.1e-04, Loss: 220.0
+Epoch [1/30], Step [900/1553], LR 1.2e-04, Loss: 236.4
+Epoch [1/30], Step [1000/1553], LR 1.2e-04, Loss: 200.8
+Epoch [1/30], Step [1100/1553], LR 1.3e-04, Loss: 172.2
+Epoch [1/30], Step [1200/1553], LR 1.4e-04, Loss: 207.8
+Epoch [1/30], Step [1300/1553], LR 1.5e-04, Loss: 207.5
+Epoch [1/30], Step [1400/1553], LR 1.6e-04, Loss: 189.3
+Epoch [1/30], Step [1500/1553], LR 1.6e-04, Loss: 177.9
+Prior (train), first 5 classes: tensor([0.0310, 0.0527, 0.0846, 0.0314, 0.0247], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'table' 'shoe' 'car_(automobile)' 'jersey' 'person' 'headlight'
+ 'trousers' 'sock' 'bowl']
+Prior (train), first 5 classes: tensor([0.0310, 0.0527, 0.0846, 0.0314, 0.0247], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'table' 'shoe' 'car_(automobile)' 'jersey' 'person' 'headlight'
+ 'trousers' 'sock' 'bowl']
+starting validation
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 58.51, mAP score EMA 17.59
+current_mAP = 58.51, highest_mAP = 58.51
+
+current_mAP = 58.51, highest_mAP = 58.51
+
+Epoch [2/30], Step [000/1553], LR 1.7e-04, Loss: 164.5
+Epoch [2/30], Step [100/1553], LR 1.8e-04, Loss: 196.7
+Epoch [2/30], Step [200/1553], LR 1.9e-04, Loss: 202.1
+Epoch [2/30], Step [300/1553], LR 1.9e-04, Loss: 255.6
+Epoch [2/30], Step [400/1553], LR 2.0e-04, Loss: 173.4
+Epoch [2/30], Step [500/1553], LR 2.1e-04, Loss: 143.3
+Epoch [2/30], Step [600/1553], LR 2.2e-04, Loss: 209.0
+Epoch [2/30], Step [700/1553], LR 2.3e-04, Loss: 145.8
+Epoch [2/30], Step [800/1553], LR 2.4e-04, Loss: 125.7
+Epoch [2/30], Step [900/1553], LR 2.5e-04, Loss: 197.1
+Epoch [2/30], Step [1000/1553], LR 2.6e-04, Loss: 221.2
+Epoch [2/30], Step [1100/1553], LR 2.7e-04, Loss: 179.3
+Epoch [2/30], Step [1200/1553], LR 2.8e-04, Loss: 220.1
+Epoch [2/30], Step [1300/1553], LR 2.9e-04, Loss: 206.0
+Epoch [2/30], Step [1400/1553], LR 3.0e-04, Loss: 166.9
+Epoch [2/30], Step [1500/1553], LR 3.1e-04, Loss: 189.3
+Prior (train), first 5 classes: tensor([0.0249, 0.0470, 0.0712, 0.0258, 0.0188], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'car_(automobile)' 'trousers' 'jersey' 'person'
+ 'headlight' 'taillight' 'short_pants']
+starting validation
+Prior (train), first 5 classes: tensor([0.0249, 0.0470, 0.0712, 0.0258, 0.0188], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'car_(automobile)' 'trousers' 'jersey' 'person'
+ 'headlight' 'taillight' 'short_pants']
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 61.87, mAP score EMA 17.88
+current_mAP = 61.87, highest_mAP = 61.87
+
+current_mAP = 61.87, highest_mAP = 61.87
+
+Epoch [3/30], Step [000/1553], LR 3.1e-04, Loss: 187.3
+Epoch [3/30], Step [100/1553], LR 3.2e-04, Loss: 132.0
+Epoch [3/30], Step [200/1553], LR 3.3e-04, Loss: 200.6
+Epoch [3/30], Step [300/1553], LR 3.4e-04, Loss: 153.2
+Epoch [3/30], Step [400/1553], LR 3.5e-04, Loss: 199.6
+Epoch [3/30], Step [500/1553], LR 3.6e-04, Loss: 180.5
+Epoch [3/30], Step [600/1553], LR 3.7e-04, Loss: 209.9
+Epoch [3/30], Step [700/1553], LR 3.8e-04, Loss: 171.7
+Epoch [3/30], Step [800/1553], LR 3.9e-04, Loss: 153.2
+Epoch [3/30], Step [900/1553], LR 4.0e-04, Loss: 137.5
+Epoch [3/30], Step [1000/1553], LR 4.1e-04, Loss: 193.7
+Epoch [3/30], Step [1100/1553], LR 4.2e-04, Loss: 186.8
+Epoch [3/30], Step [1200/1553], LR 4.3e-04, Loss: 163.3
+Epoch [3/30], Step [1300/1553], LR 4.3e-04, Loss: 169.4
+Epoch [3/30], Step [1400/1553], LR 4.4e-04, Loss: 145.4
+Epoch [3/30], Step [1500/1553], LR 4.5e-04, Loss: 176.5
+Prior (train), first 5 classes: tensor([0.0216, 0.0439, 0.0646, 0.0227, 0.0155], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'trousers' 'car_(automobile)' 'person' 'jersey'
+ 'headlight' 'short_pants' 'taillight']
+Prior (train), first 5 classes: tensor([0.0216, 0.0439, 0.0646, 0.0227, 0.0155], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'table' 'trousers' 'car_(automobile)' 'person' 'jersey'
+ 'headlight' 'short_pants' 'taillight']
+starting validation
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 61.90, mAP score EMA 22.71
+current_mAP = 61.90, highest_mAP = 61.90
+
+current_mAP = 61.90, highest_mAP = 61.90
+
+Epoch [4/30], Step [000/1553], LR 4.6e-04, Loss: 162.0
+Epoch [4/30], Step [100/1553], LR 4.6e-04, Loss: 143.5
+Epoch [4/30], Step [200/1553], LR 4.7e-04, Loss: 181.1
+Epoch [4/30], Step [300/1553], LR 4.8e-04, Loss: 186.0
+Epoch [4/30], Step [400/1553], LR 4.9e-04, Loss: 153.6
+Epoch [4/30], Step [500/1553], LR 5.0e-04, Loss: 193.2
+Epoch [4/30], Step [600/1553], LR 5.0e-04, Loss: 148.8
+Epoch [4/30], Step [700/1553], LR 5.1e-04, Loss: 174.0
+Epoch [4/30], Step [800/1553], LR 5.2e-04, Loss: 124.5
+Epoch [4/30], Step [900/1553], LR 5.2e-04, Loss: 189.3
+Epoch [4/30], Step [1000/1553], LR 5.3e-04, Loss: 175.5
+Epoch [4/30], Step [1100/1553], LR 5.4e-04, Loss: 183.1
+Epoch [4/30], Step [1200/1553], LR 5.4e-04, Loss: 182.9
+Epoch [4/30], Step [1300/1553], LR 5.5e-04, Loss: 207.6
+Epoch [4/30], Step [1400/1553], LR 5.5e-04, Loss: 148.2
+Epoch [4/30], Step [1500/1553], LR 5.6e-04, Loss: 158.2
+Prior (train), first 5 classes: tensor([0.0194, 0.0416, 0.0603, 0.0207, 0.0136], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'car_(automobile)' 'person' 'jersey'
+ 'headlight' 'short_pants' 'handle']
+starting validation
+Prior (train), first 5 classes: tensor([0.0194, 0.0416, 0.0603, 0.0207, 0.0136], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'car_(automobile)' 'person' 'jersey'
+ 'headlight' 'short_pants' 'handle']
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 61.39, mAP score EMA 51.68
+current_mAP = 61.39, highest_mAP = 61.90
+
+current_mAP = 61.39, highest_mAP = 61.90
+
+Epoch [5/30], Step [000/1553], LR 5.6e-04, Loss: 180.5
+Epoch [5/30], Step [100/1553], LR 5.7e-04, Loss: 159.4
+Epoch [5/30], Step [200/1553], LR 5.7e-04, Loss: 177.7
+Epoch [5/30], Step [300/1553], LR 5.7e-04, Loss: 164.0
+Epoch [5/30], Step [400/1553], LR 5.8e-04, Loss: 195.4
+Epoch [5/30], Step [500/1553], LR 5.8e-04, Loss: 183.5
+Epoch [5/30], Step [600/1553], LR 5.9e-04, Loss: 176.6
+Epoch [5/30], Step [700/1553], LR 5.9e-04, Loss: 109.9
+Epoch [5/30], Step [800/1553], LR 5.9e-04, Loss: 170.7
+Epoch [5/30], Step [900/1553], LR 5.9e-04, Loss: 162.8
+Epoch [5/30], Step [1000/1553], LR 6.0e-04, Loss: 215.6
+Epoch [5/30], Step [1100/1553], LR 6.0e-04, Loss: 158.7
+Epoch [5/30], Step [1200/1553], LR 6.0e-04, Loss: 156.2
+Epoch [5/30], Step [1300/1553], LR 6.0e-04, Loss: 151.4
+Epoch [5/30], Step [1400/1553], LR 6.0e-04, Loss: 145.0
+Epoch [5/30], Step [1500/1553], LR 6.0e-04, Loss: 149.3
+Prior (train), first 5 classes: tensor([0.0179, 0.0398, 0.0572, 0.0194, 0.0122], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'car_(automobile)' 'person' 'jersey'
+ 'headlight' 'short_pants' 'handle']
+starting validation
+Prior (train), first 5 classes: tensor([0.0179, 0.0398, 0.0572, 0.0194, 0.0122], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'car_(automobile)' 'person' 'jersey'
+ 'headlight' 'short_pants' 'handle']
+Model checkpoint saved successfully.
+starting validation
+current_mAP = 62.25, highest_mAP = 62.25
+
+mAP score regular 61.75, mAP score EMA 62.25
+current_mAP = 62.25, highest_mAP = 62.25
+
+Epoch [6/30], Step [000/1553], LR 6.0e-04, Loss: 166.2
+Epoch [6/30], Step [100/1553], LR 6.0e-04, Loss: 139.3
+Epoch [6/30], Step [200/1553], LR 6.0e-04, Loss: 162.1
+Epoch [6/30], Step [300/1553], LR 6.0e-04, Loss: 149.4
+Epoch [6/30], Step [400/1553], LR 6.0e-04, Loss: 156.6
+Epoch [6/30], Step [500/1553], LR 6.0e-04, Loss: 167.2
+Epoch [6/30], Step [600/1553], LR 6.0e-04, Loss: 166.5
+Epoch [6/30], Step [700/1553], LR 6.0e-04, Loss: 171.3
+Epoch [6/30], Step [800/1553], LR 6.0e-04, Loss: 173.7
+Epoch [6/30], Step [900/1553], LR 6.0e-04, Loss: 151.9
+Epoch [6/30], Step [1000/1553], LR 6.0e-04, Loss: 143.6
+Epoch [6/30], Step [1100/1553], LR 6.0e-04, Loss: 135.0
+Epoch [6/30], Step [1200/1553], LR 6.0e-04, Loss: 157.2
+Epoch [6/30], Step [1300/1553], LR 6.0e-04, Loss: 157.4
+Epoch [6/30], Step [1400/1553], LR 6.0e-04, Loss: 86.7
+Epoch [6/30], Step [1500/1553], LR 6.0e-04, Loss: 166.6
+Prior (train), first 5 classes: tensor([0.0167, 0.0385, 0.0550, 0.0183, 0.0112], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'car_(automobile)' 'person' 'jersey'
+ 'headlight' 'short_pants' 'handle']
+Prior (train), first 5 classes: tensor([0.0167, 0.0385, 0.0550, 0.0183, 0.0112], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'car_(automobile)' 'person' 'jersey'
+ 'headlight' 'short_pants' 'handle']
+starting validation
+Model checkpoint saved successfully.
+starting validation
+current_mAP = 63.96, highest_mAP = 63.96
+
+mAP score regular 61.50, mAP score EMA 63.96
+current_mAP = 63.96, highest_mAP = 63.96
+
+Epoch [7/30], Step [000/1553], LR 6.0e-04, Loss: 156.3
+Epoch [7/30], Step [100/1553], LR 6.0e-04, Loss: 154.9
+Epoch [7/30], Step [200/1553], LR 6.0e-04, Loss: 104.3
+Epoch [7/30], Step [300/1553], LR 6.0e-04, Loss: 153.5
+Epoch [7/30], Step [400/1553], LR 6.0e-04, Loss: 150.4
+Epoch [7/30], Step [500/1553], LR 6.0e-04, Loss: 131.4
+Epoch [7/30], Step [600/1553], LR 6.0e-04, Loss: 153.8
+Epoch [7/30], Step [700/1553], LR 5.9e-04, Loss: 137.0
+Epoch [7/30], Step [800/1553], LR 5.9e-04, Loss: 125.7
+Epoch [7/30], Step [900/1553], LR 5.9e-04, Loss: 170.0
+Epoch [7/30], Step [1000/1553], LR 5.9e-04, Loss: 135.0
+Epoch [7/30], Step [1100/1553], LR 5.9e-04, Loss: 141.4
+Epoch [7/30], Step [1200/1553], LR 5.9e-04, Loss: 168.9
+Epoch [7/30], Step [1300/1553], LR 5.9e-04, Loss: 113.8
+Epoch [7/30], Step [1400/1553], LR 5.9e-04, Loss: 141.0
+Epoch [7/30], Step [1500/1553], LR 5.9e-04, Loss: 132.9
+Prior (train), first 5 classes: tensor([0.0158, 0.0374, 0.0532, 0.0174, 0.0104], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'car_(automobile)' 'person' 'jersey'
+ 'short_pants' 'headlight' 'handle']
+Prior (train), first 5 classes: tensor([0.0158, 0.0374, 0.0532, 0.0174, 0.0104], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'car_(automobile)' 'person' 'jersey'
+ 'short_pants' 'headlight' 'handle']
+starting validation
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 61.65, mAP score EMA 64.17
+current_mAP = 64.17, highest_mAP = 64.17
+
+current_mAP = 64.17, highest_mAP = 64.17
+
+Epoch [8/30], Step [000/1553], LR 5.9e-04, Loss: 143.6
+Epoch [8/30], Step [100/1553], LR 5.9e-04, Loss: 119.4
+Epoch [8/30], Step [200/1553], LR 5.9e-04, Loss: 125.3
+Epoch [8/30], Step [300/1553], LR 5.9e-04, Loss: 134.6
+Epoch [8/30], Step [400/1553], LR 5.9e-04, Loss: 121.5
+Epoch [8/30], Step [500/1553], LR 5.9e-04, Loss: 113.2
+Epoch [8/30], Step [600/1553], LR 5.9e-04, Loss: 145.3
+Epoch [8/30], Step [700/1553], LR 5.8e-04, Loss: 114.6
+Epoch [8/30], Step [800/1553], LR 5.8e-04, Loss: 134.1
+Epoch [8/30], Step [900/1553], LR 5.8e-04, Loss: 108.5
+Epoch [8/30], Step [1000/1553], LR 5.8e-04, Loss: 159.3
+Epoch [8/30], Step [1100/1553], LR 5.8e-04, Loss: 128.1
+Epoch [8/30], Step [1200/1553], LR 5.8e-04, Loss: 136.8
+Epoch [8/30], Step [1300/1553], LR 5.8e-04, Loss: 178.2
+Epoch [8/30], Step [1400/1553], LR 5.8e-04, Loss: 173.3
+Epoch [8/30], Step [1500/1553], LR 5.8e-04, Loss: 177.1
+Prior (train), first 5 classes: tensor([0.0150, 0.0364, 0.0516, 0.0166, 0.0097], device='cuda:1')
+Prior (train), first 5 classes: tensor([0.0150, 0.0364, 0.0516, 0.0166, 0.0097], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'car_(automobile)' 'person' 'jersey'
+ 'short_pants' 'headlight' 'handle']
+starting validation
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'car_(automobile)' 'person' 'jersey'
+ 'short_pants' 'headlight' 'handle']
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 61.20, mAP score EMA 64.23
+current_mAP = 64.23, highest_mAP = 64.23
+
+current_mAP = 64.23, highest_mAP = 64.23
+
+Epoch [9/30], Step [000/1553], LR 5.8e-04, Loss: 108.8
+Epoch [9/30], Step [100/1553], LR 5.8e-04, Loss: 139.3
+Epoch [9/30], Step [200/1553], LR 5.8e-04, Loss: 107.3
+Epoch [9/30], Step [300/1553], LR 5.7e-04, Loss: 133.8
+Epoch [9/30], Step [400/1553], LR 5.7e-04, Loss: 134.5
+Epoch [9/30], Step [500/1553], LR 5.7e-04, Loss: 158.1
+Epoch [9/30], Step [600/1553], LR 5.7e-04, Loss: 175.0
+Epoch [9/30], Step [700/1553], LR 5.7e-04, Loss: 94.6
+Epoch [9/30], Step [800/1553], LR 5.7e-04, Loss: 101.9
+Epoch [9/30], Step [900/1553], LR 5.7e-04, Loss: 141.3
+Epoch [9/30], Step [1000/1553], LR 5.7e-04, Loss: 96.5
+Epoch [9/30], Step [1100/1553], LR 5.7e-04, Loss: 161.3
+Epoch [9/30], Step [1200/1553], LR 5.6e-04, Loss: 113.5
+Epoch [9/30], Step [1300/1553], LR 5.6e-04, Loss: 120.1
+Epoch [9/30], Step [1400/1553], LR 5.6e-04, Loss: 158.8
+Epoch [9/30], Step [1500/1553], LR 5.6e-04, Loss: 165.1
+Prior (train), first 5 classes: tensor([0.0143, 0.0354, 0.0501, 0.0160, 0.0091], device='cuda:1')
+Prior (train), first 5 classes: tensor([0.0143, 0.0354, 0.0501, 0.0160, 0.0091], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'car_(automobile)' 'person' 'jersey'
+ 'short_pants' 'handle' 'headlight']
+starting validation
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'car_(automobile)' 'person' 'jersey'
+ 'short_pants' 'handle' 'headlight']
+Model checkpoint saved successfully.
+starting validation
+current_mAP = 63.91, highest_mAP = 64.23
+
+mAP score regular 61.01, mAP score EMA 63.91
+current_mAP = 63.91, highest_mAP = 64.23
+
+Epoch [10/30], Step [000/1553], LR 5.6e-04, Loss: 102.1
+Epoch [10/30], Step [100/1553], LR 5.6e-04, Loss: 106.6
+Epoch [10/30], Step [200/1553], LR 5.6e-04, Loss: 132.6
+Epoch [10/30], Step [300/1553], LR 5.6e-04, Loss: 133.6
+Epoch [10/30], Step [400/1553], LR 5.5e-04, Loss: 78.5
+Epoch [10/30], Step [500/1553], LR 5.5e-04, Loss: 105.3
+Epoch [10/30], Step [600/1553], LR 5.5e-04, Loss: 123.5
+Epoch [10/30], Step [700/1553], LR 5.5e-04, Loss: 109.2
+Epoch [10/30], Step [800/1553], LR 5.5e-04, Loss: 105.7
+Epoch [10/30], Step [900/1553], LR 5.5e-04, Loss: 142.1
+Epoch [10/30], Step [1000/1553], LR 5.5e-04, Loss: 143.3
+Epoch [10/30], Step [1100/1553], LR 5.4e-04, Loss: 164.2
+Epoch [10/30], Step [1200/1553], LR 5.4e-04, Loss: 107.9
+Epoch [10/30], Step [1300/1553], LR 5.4e-04, Loss: 140.9
+Epoch [10/30], Step [1400/1553], LR 5.4e-04, Loss: 113.3
+Epoch [10/30], Step [1500/1553], LR 5.4e-04, Loss: 134.2
+Prior (train), first 5 classes: tensor([0.0137, 0.0346, 0.0490, 0.0154, 0.0085], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'car_(automobile)' 'person' 'jersey'
+ 'short_pants' 'handle' 'headlight']
+starting validation
+Prior (train), first 5 classes: tensor([0.0137, 0.0346, 0.0490, 0.0154, 0.0085], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'car_(automobile)' 'person' 'jersey'
+ 'short_pants' 'handle' 'headlight']
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 61.16, mAP score EMA 63.38
+current_mAP = 63.38, highest_mAP = 64.23
+
+current_mAP = 63.38, highest_mAP = 64.23
+
+Epoch [11/30], Step [000/1553], LR 5.4e-04, Loss: 91.1
+Epoch [11/30], Step [100/1553], LR 5.4e-04, Loss: 106.2
+Epoch [11/30], Step [200/1553], LR 5.3e-04, Loss: 93.9
+Epoch [11/30], Step [300/1553], LR 5.3e-04, Loss: 130.6
+Epoch [11/30], Step [400/1553], LR 5.3e-04, Loss: 106.9
+Epoch [11/30], Step [500/1553], LR 5.3e-04, Loss: 129.2
+Epoch [11/30], Step [600/1553], LR 5.3e-04, Loss: 117.0
+Epoch [11/30], Step [700/1553], LR 5.3e-04, Loss: 115.3
+Epoch [11/30], Step [800/1553], LR 5.3e-04, Loss: 101.1
+Epoch [11/30], Step [900/1553], LR 5.2e-04, Loss: 105.6
+Epoch [11/30], Step [1000/1553], LR 5.2e-04, Loss: 153.4
+Epoch [11/30], Step [1100/1553], LR 5.2e-04, Loss: 106.1
+Epoch [11/30], Step [1200/1553], LR 5.2e-04, Loss: 161.4
+Epoch [11/30], Step [1300/1553], LR 5.2e-04, Loss: 153.2
+Epoch [11/30], Step [1400/1553], LR 5.1e-04, Loss: 110.9
+Epoch [11/30], Step [1500/1553], LR 5.1e-04, Loss: 131.3
+Prior (train), first 5 classes: tensor([0.0131, 0.0337, 0.0478, 0.0149, 0.0080], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'car_(automobile)' 'person' 'jersey'
+ 'short_pants' 'handle' 'headlight']
+starting validation
+Prior (train), first 5 classes: tensor([0.0131, 0.0337, 0.0478, 0.0149, 0.0080], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'car_(automobile)' 'person' 'jersey'
+ 'short_pants' 'handle' 'headlight']
+Model checkpoint saved successfully.
+starting validation
+current_mAP = 63.11, highest_mAP = 64.23
+
+mAP score regular 60.96, mAP score EMA 63.11
+current_mAP = 63.11, highest_mAP = 64.23
+
+Epoch [12/30], Step [000/1553], LR 5.1e-04, Loss: 84.3
+Epoch [12/30], Step [100/1553], LR 5.1e-04, Loss: 107.1
+Epoch [12/30], Step [200/1553], LR 5.1e-04, Loss: 108.3
+Epoch [12/30], Step [300/1553], LR 5.1e-04, Loss: 93.2
+Epoch [12/30], Step [400/1553], LR 5.0e-04, Loss: 116.9
+Epoch [12/30], Step [500/1553], LR 5.0e-04, Loss: 85.4
+Epoch [12/30], Step [600/1553], LR 5.0e-04, Loss: 157.6
+Epoch [12/30], Step [700/1553], LR 5.0e-04, Loss: 107.9
+Epoch [12/30], Step [800/1553], LR 5.0e-04, Loss: 113.4
+Epoch [12/30], Step [900/1553], LR 5.0e-04, Loss: 109.7
+Epoch [12/30], Step [1000/1553], LR 4.9e-04, Loss: 89.8
+Epoch [12/30], Step [1100/1553], LR 4.9e-04, Loss: 158.7
+Epoch [12/30], Step [1200/1553], LR 4.9e-04, Loss: 114.5
+Epoch [12/30], Step [1300/1553], LR 4.9e-04, Loss: 145.8
+Epoch [12/30], Step [1400/1553], LR 4.9e-04, Loss: 142.8
+Epoch [12/30], Step [1500/1553], LR 4.8e-04, Loss: 113.7
+Prior (train), first 5 classes: tensor([0.0126, 0.0330, 0.0468, 0.0144, 0.0076], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'car_(automobile)' 'person' 'jersey'
+ 'short_pants' 'handle' 'headlight']
+Prior (train), first 5 classes: tensor([0.0126, 0.0330, 0.0468, 0.0144, 0.0076], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'car_(automobile)' 'person' 'jersey'
+ 'short_pants' 'handle' 'headlight']
+starting validation
+Model checkpoint saved successfully.
+starting validation
+current_mAP = 62.94, highest_mAP = 64.23
+
+mAP score regular 59.86, mAP score EMA 62.94
+current_mAP = 62.94, highest_mAP = 64.23
+
+Epoch [13/30], Step [000/1553], LR 4.8e-04, Loss: 100.6
+Epoch [13/30], Step [100/1553], LR 4.8e-04, Loss: 100.4
+Epoch [13/30], Step [200/1553], LR 4.8e-04, Loss: 64.5
+Epoch [13/30], Step [300/1553], LR 4.8e-04, Loss: 100.6
+Epoch [13/30], Step [400/1553], LR 4.7e-04, Loss: 101.9
+Epoch [13/30], Step [500/1553], LR 4.7e-04, Loss: 105.7
+Epoch [13/30], Step [600/1553], LR 4.7e-04, Loss: 104.7
+Epoch [13/30], Step [700/1553], LR 4.7e-04, Loss: 122.4
+Epoch [13/30], Step [800/1553], LR 4.7e-04, Loss: 95.6
+Epoch [13/30], Step [900/1553], LR 4.6e-04, Loss: 80.5
+Epoch [13/30], Step [1000/1553], LR 4.6e-04, Loss: 69.1
+Epoch [13/30], Step [1100/1553], LR 4.6e-04, Loss: 119.4
+Epoch [13/30], Step [1200/1553], LR 4.6e-04, Loss: 112.5
+Epoch [13/30], Step [1300/1553], LR 4.6e-04, Loss: 135.3
+Epoch [13/30], Step [1400/1553], LR 4.5e-04, Loss: 107.5
+Epoch [13/30], Step [1500/1553], LR 4.5e-04, Loss: 116.9
+Prior (train), first 5 classes: tensor([0.0122, 0.0322, 0.0458, 0.0140, 0.0073], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'car_(automobile)' 'person' 'jersey'
+ 'short_pants' 'handle' 'headlight']
+Prior (train), first 5 classes: tensor([0.0122, 0.0322, 0.0458, 0.0140, 0.0073], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'car_(automobile)' 'person' 'jersey'
+ 'short_pants' 'handle' 'headlight']
+starting validation
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 60.14, mAP score EMA 62.44
+current_mAP = 62.44, highest_mAP = 64.23
+
+current_mAP = 62.44, highest_mAP = 64.23
+
+Epoch [14/30], Step [000/1553], LR 4.5e-04, Loss: 107.9
+Epoch [14/30], Step [100/1553], LR 4.5e-04, Loss: 130.3
+Epoch [14/30], Step [200/1553], LR 4.5e-04, Loss: 50.4
+Epoch [14/30], Step [300/1553], LR 4.4e-04, Loss: 94.5
+Epoch [14/30], Step [400/1553], LR 4.4e-04, Loss: 73.9
+Epoch [14/30], Step [500/1553], LR 4.4e-04, Loss: 108.3
+Epoch [14/30], Step [600/1553], LR 4.4e-04, Loss: 123.8
+Epoch [14/30], Step [700/1553], LR 4.3e-04, Loss: 82.5
+Epoch [14/30], Step [800/1553], LR 4.3e-04, Loss: 101.3
+Epoch [14/30], Step [900/1553], LR 4.3e-04, Loss: 112.5
+Epoch [14/30], Step [1000/1553], LR 4.3e-04, Loss: 92.4
+Epoch [14/30], Step [1100/1553], LR 4.3e-04, Loss: 87.8
+Epoch [14/30], Step [1200/1553], LR 4.2e-04, Loss: 108.1
+Epoch [14/30], Step [1300/1553], LR 4.2e-04, Loss: 62.2
+Epoch [14/30], Step [1400/1553], LR 4.2e-04, Loss: 112.5
+Epoch [14/30], Step [1500/1553], LR 4.2e-04, Loss: 112.8
+Prior (train), first 5 classes: tensor([0.0117, 0.0315, 0.0449, 0.0135, 0.0069], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'headlight']
+Prior (train), first 5 classes: tensor([0.0117, 0.0315, 0.0449, 0.0135, 0.0069], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'headlight']
+starting validation
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 60.37, mAP score EMA 62.21
+current_mAP = 62.21, highest_mAP = 64.23
+
+current_mAP = 62.21, highest_mAP = 64.23
+
+Epoch [15/30], Step [000/1553], LR 4.1e-04, Loss: 73.9
+Epoch [15/30], Step [100/1553], LR 4.1e-04, Loss: 81.0
+Epoch [15/30], Step [200/1553], LR 4.1e-04, Loss: 97.8
+Epoch [15/30], Step [300/1553], LR 4.1e-04, Loss: 94.8
+Epoch [15/30], Step [400/1553], LR 4.1e-04, Loss: 109.0
+Epoch [15/30], Step [500/1553], LR 4.0e-04, Loss: 87.3
+Epoch [15/30], Step [600/1553], LR 4.0e-04, Loss: 76.9
+Epoch [15/30], Step [700/1553], LR 4.0e-04, Loss: 69.2
+Epoch [15/30], Step [800/1553], LR 4.0e-04, Loss: 68.2
+Epoch [15/30], Step [900/1553], LR 3.9e-04, Loss: 93.4
+Epoch [15/30], Step [1000/1553], LR 3.9e-04, Loss: 103.9
+Epoch [15/30], Step [1100/1553], LR 3.9e-04, Loss: 124.1
+Epoch [15/30], Step [1200/1553], LR 3.9e-04, Loss: 101.6
+Epoch [15/30], Step [1300/1553], LR 3.8e-04, Loss: 106.0
+Epoch [15/30], Step [1400/1553], LR 3.8e-04, Loss: 84.0
+Epoch [15/30], Step [1500/1553], LR 3.8e-04, Loss: 112.3
+Prior (train), first 5 classes: tensor([0.0113, 0.0308, 0.0442, 0.0131, 0.0066], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+Prior (train), first 5 classes: tensor([0.0113, 0.0308, 0.0442, 0.0131, 0.0066], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+starting validation
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 60.44, mAP score EMA 61.91
+current_mAP = 61.91, highest_mAP = 64.23
+
+current_mAP = 61.91, highest_mAP = 64.23
+
+Epoch [16/30], Step [000/1553], LR 3.8e-04, Loss: 85.3
+Epoch [16/30], Step [100/1553], LR 3.8e-04, Loss: 78.8
+Epoch [16/30], Step [200/1553], LR 3.7e-04, Loss: 94.2
+Epoch [16/30], Step [300/1553], LR 3.7e-04, Loss: 99.3
+Epoch [16/30], Step [400/1553], LR 3.7e-04, Loss: 71.1
+Epoch [16/30], Step [500/1553], LR 3.7e-04, Loss: 53.9
+Epoch [16/30], Step [600/1553], LR 3.6e-04, Loss: 82.3
+Epoch [16/30], Step [700/1553], LR 3.6e-04, Loss: 94.2
+Epoch [16/30], Step [800/1553], LR 3.6e-04, Loss: 67.0
+Epoch [16/30], Step [900/1553], LR 3.6e-04, Loss: 98.4
+Epoch [16/30], Step [1000/1553], LR 3.5e-04, Loss: 95.9
+Epoch [16/30], Step [1100/1553], LR 3.5e-04, Loss: 90.9
+Epoch [16/30], Step [1200/1553], LR 3.5e-04, Loss: 71.7
+Epoch [16/30], Step [1300/1553], LR 3.5e-04, Loss: 65.6
+Epoch [16/30], Step [1400/1553], LR 3.4e-04, Loss: 98.7
+Epoch [16/30], Step [1500/1553], LR 3.4e-04, Loss: 87.4
+Prior (train), first 5 classes: tensor([0.0109, 0.0300, 0.0434, 0.0128, 0.0063], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+Prior (train), first 5 classes: tensor([0.0109, 0.0300, 0.0434, 0.0128, 0.0063], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+starting validation
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 59.46, mAP score EMA 61.59
+current_mAP = 61.59, highest_mAP = 64.23
+
+current_mAP = 61.59, highest_mAP = 64.23
+
+Epoch [17/30], Step [000/1553], LR 3.4e-04, Loss: 72.1
+Epoch [17/30], Step [100/1553], LR 3.4e-04, Loss: 72.3
+Epoch [17/30], Step [200/1553], LR 3.3e-04, Loss: 67.9
+Epoch [17/30], Step [300/1553], LR 3.3e-04, Loss: 111.4
+Epoch [17/30], Step [400/1553], LR 3.3e-04, Loss: 56.1
+Epoch [17/30], Step [500/1553], LR 3.3e-04, Loss: 64.6
+Epoch [17/30], Step [600/1553], LR 3.2e-04, Loss: 97.4
+Epoch [17/30], Step [700/1553], LR 3.2e-04, Loss: 63.8
+Epoch [17/30], Step [800/1553], LR 3.2e-04, Loss: 46.3
+Epoch [17/30], Step [900/1553], LR 3.2e-04, Loss: 65.7
+Epoch [17/30], Step [1000/1553], LR 3.1e-04, Loss: 65.5
+Epoch [17/30], Step [1100/1553], LR 3.1e-04, Loss: 74.7
+Epoch [17/30], Step [1200/1553], LR 3.1e-04, Loss: 72.2
+Epoch [17/30], Step [1300/1553], LR 3.1e-04, Loss: 67.1
+Epoch [17/30], Step [1400/1553], LR 3.0e-04, Loss: 63.8
+Epoch [17/30], Step [1500/1553], LR 3.0e-04, Loss: 64.0
+Prior (train), first 5 classes: tensor([0.0105, 0.0293, 0.0427, 0.0124, 0.0061], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+starting validation
+Prior (train), first 5 classes: tensor([0.0105, 0.0293, 0.0427, 0.0124, 0.0061], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 59.68, mAP score EMA 61.37
+current_mAP = 61.37, highest_mAP = 64.23
+
+current_mAP = 61.37, highest_mAP = 64.23
+
+Epoch [18/30], Step [000/1553], LR 3.0e-04, Loss: 83.9
+Epoch [18/30], Step [100/1553], LR 3.0e-04, Loss: 61.0
+Epoch [18/30], Step [200/1553], LR 2.9e-04, Loss: 64.4
+Epoch [18/30], Step [300/1553], LR 2.9e-04, Loss: 67.0
+Epoch [18/30], Step [400/1553], LR 2.9e-04, Loss: 47.1
+Epoch [18/30], Step [500/1553], LR 2.9e-04, Loss: 62.3
+Epoch [18/30], Step [600/1553], LR 2.8e-04, Loss: 34.8
+Epoch [18/30], Step [700/1553], LR 2.8e-04, Loss: 62.9
+Epoch [18/30], Step [800/1553], LR 2.8e-04, Loss: 52.1
+Epoch [18/30], Step [900/1553], LR 2.8e-04, Loss: 70.7
+Epoch [18/30], Step [1000/1553], LR 2.7e-04, Loss: 89.8
+Epoch [18/30], Step [1100/1553], LR 2.7e-04, Loss: 68.7
+Epoch [18/30], Step [1200/1553], LR 2.7e-04, Loss: 70.6
+Epoch [18/30], Step [1300/1553], LR 2.7e-04, Loss: 83.1
+Epoch [18/30], Step [1400/1553], LR 2.6e-04, Loss: 88.3
+Epoch [18/30], Step [1500/1553], LR 2.6e-04, Loss: 42.9
+Prior (train), first 5 classes: tensor([0.0101, 0.0286, 0.0420, 0.0121, 0.0058], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+starting validation
+Prior (train), first 5 classes: tensor([0.0101, 0.0286, 0.0420, 0.0121, 0.0058], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 59.41, mAP score EMA 61.18
+current_mAP = 61.18, highest_mAP = 64.23
+
+current_mAP = 61.18, highest_mAP = 64.23
+
+Epoch [19/30], Step [000/1553], LR 2.6e-04, Loss: 75.4
+Epoch [19/30], Step [100/1553], LR 2.6e-04, Loss: 44.7
+Epoch [19/30], Step [200/1553], LR 2.6e-04, Loss: 58.4
+Epoch [19/30], Step [300/1553], LR 2.5e-04, Loss: 63.6
+Epoch [19/30], Step [400/1553], LR 2.5e-04, Loss: 69.7
+Epoch [19/30], Step [500/1553], LR 2.5e-04, Loss: 45.1
+Epoch [19/30], Step [600/1553], LR 2.5e-04, Loss: 69.3
+Epoch [19/30], Step [700/1553], LR 2.4e-04, Loss: 71.5
+Epoch [19/30], Step [800/1553], LR 2.4e-04, Loss: 58.5
+Epoch [19/30], Step [900/1553], LR 2.4e-04, Loss: 60.0
+Epoch [19/30], Step [1000/1553], LR 2.4e-04, Loss: 49.0
+Epoch [19/30], Step [1100/1553], LR 2.3e-04, Loss: 85.1
+Epoch [19/30], Step [1200/1553], LR 2.3e-04, Loss: 65.4
+Epoch [19/30], Step [1300/1553], LR 2.3e-04, Loss: 52.9
+Epoch [19/30], Step [1400/1553], LR 2.3e-04, Loss: 59.2
+Epoch [19/30], Step [1500/1553], LR 2.2e-04, Loss: 46.0
+Prior (train), first 5 classes: tensor([0.0098, 0.0280, 0.0414, 0.0118, 0.0056], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+Prior (train), first 5 classes: tensor([0.0098, 0.0280, 0.0414, 0.0118, 0.0056], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+starting validation
+Model checkpoint saved successfully.
+starting validation
+current_mAP = 60.69, highest_mAP = 64.23
+
+mAP score regular 59.58, mAP score EMA 60.69
+current_mAP = 60.69, highest_mAP = 64.23
+
+Epoch [20/30], Step [000/1553], LR 2.2e-04, Loss: 36.0
+Epoch [20/30], Step [100/1553], LR 2.2e-04, Loss: 56.0
+Epoch [20/30], Step [200/1553], LR 2.2e-04, Loss: 41.6
+Epoch [20/30], Step [300/1553], LR 2.2e-04, Loss: 34.2
+Epoch [20/30], Step [400/1553], LR 2.1e-04, Loss: 62.4
+Epoch [20/30], Step [500/1553], LR 2.1e-04, Loss: 64.2
+Epoch [20/30], Step [600/1553], LR 2.1e-04, Loss: 85.8
+Epoch [20/30], Step [700/1553], LR 2.1e-04, Loss: 52.7
+Epoch [20/30], Step [800/1553], LR 2.0e-04, Loss: 38.7
+Epoch [20/30], Step [900/1553], LR 2.0e-04, Loss: 52.0
+Epoch [20/30], Step [1000/1553], LR 2.0e-04, Loss: 58.6
+Epoch [20/30], Step [1100/1553], LR 2.0e-04, Loss: 68.9
+Epoch [20/30], Step [1200/1553], LR 1.9e-04, Loss: 38.4
+Epoch [20/30], Step [1300/1553], LR 1.9e-04, Loss: 36.9
+Epoch [20/30], Step [1400/1553], LR 1.9e-04, Loss: 57.3
+Epoch [20/30], Step [1500/1553], LR 1.9e-04, Loss: 73.8
+Prior (train), first 5 classes: tensor([0.0094, 0.0274, 0.0408, 0.0115, 0.0054], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+Prior (train), first 5 classes: tensor([0.0094, 0.0274, 0.0408, 0.0115, 0.0054], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+starting validation
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 59.40, mAP score EMA 60.51
+current_mAP = 60.51, highest_mAP = 64.23
+
+current_mAP = 60.51, highest_mAP = 64.23
+
+Epoch [21/30], Step [000/1553], LR 1.9e-04, Loss: 46.6
+Epoch [21/30], Step [100/1553], LR 1.8e-04, Loss: 35.5
+Epoch [21/30], Step [200/1553], LR 1.8e-04, Loss: 51.8
+Epoch [21/30], Step [300/1553], LR 1.8e-04, Loss: 47.7
+Epoch [21/30], Step [400/1553], LR 1.8e-04, Loss: 41.8
+Epoch [21/30], Step [500/1553], LR 1.7e-04, Loss: 55.0
+Epoch [21/30], Step [600/1553], LR 1.7e-04, Loss: 60.0
+Epoch [21/30], Step [700/1553], LR 1.7e-04, Loss: 30.4
+Epoch [21/30], Step [800/1553], LR 1.7e-04, Loss: 40.9
+Epoch [21/30], Step [900/1553], LR 1.6e-04, Loss: 38.4
+Epoch [21/30], Step [1000/1553], LR 1.6e-04, Loss: 63.0
+Epoch [21/30], Step [1100/1553], LR 1.6e-04, Loss: 62.2
+Epoch [21/30], Step [1200/1553], LR 1.6e-04, Loss: 76.8
+Epoch [21/30], Step [1300/1553], LR 1.6e-04, Loss: 45.8
+Epoch [21/30], Step [1400/1553], LR 1.5e-04, Loss: 76.4
+Epoch [21/30], Step [1500/1553], LR 1.5e-04, Loss: 46.7
+Prior (train), first 5 classes: tensor([0.0091, 0.0268, 0.0402, 0.0112, 0.0052], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'handle' 'short_pants' 'shirt']
+Prior (train), first 5 classes: tensor([0.0091, 0.0268, 0.0402, 0.0112, 0.0052], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'handle' 'short_pants' 'shirt']
+starting validation
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 58.98, mAP score EMA 60.30
+current_mAP = 60.30, highest_mAP = 64.23
+
+current_mAP = 60.30, highest_mAP = 64.23
+
+Epoch [22/30], Step [000/1553], LR 1.5e-04, Loss: 39.1
+Epoch [22/30], Step [100/1553], LR 1.5e-04, Loss: 36.6
+Epoch [22/30], Step [200/1553], LR 1.5e-04, Loss: 44.9
+Epoch [22/30], Step [300/1553], LR 1.4e-04, Loss: 31.1
+Epoch [22/30], Step [400/1553], LR 1.4e-04, Loss: 50.7
+Epoch [22/30], Step [500/1553], LR 1.4e-04, Loss: 38.3
+Epoch [22/30], Step [600/1553], LR 1.4e-04, Loss: 46.4
+Epoch [22/30], Step [700/1553], LR 1.3e-04, Loss: 39.7
+Epoch [22/30], Step [800/1553], LR 1.3e-04, Loss: 47.7
+Epoch [22/30], Step [900/1553], LR 1.3e-04, Loss: 28.8
+Epoch [22/30], Step [1000/1553], LR 1.3e-04, Loss: 45.4
+Epoch [22/30], Step [1100/1553], LR 1.3e-04, Loss: 40.4
+Epoch [22/30], Step [1200/1553], LR 1.2e-04, Loss: 33.1
+Epoch [22/30], Step [1300/1553], LR 1.2e-04, Loss: 45.0
+Epoch [22/30], Step [1400/1553], LR 1.2e-04, Loss: 39.7
+Epoch [22/30], Step [1500/1553], LR 1.2e-04, Loss: 79.3
+Prior (train), first 5 classes: tensor([0.0089, 0.0262, 0.0397, 0.0109, 0.0050], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'handle' 'short_pants' 'shirt']
+Prior (train), first 5 classes: tensor([0.0089, 0.0262, 0.0397, 0.0109, 0.0050], device='cuda:0')
+starting validation
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'handle' 'short_pants' 'shirt']
+Model checkpoint saved successfully.
+starting validation
+current_mAP = 60.08, highest_mAP = 64.23
+
+mAP score regular 59.27, mAP score EMA 60.08
+current_mAP = 60.08, highest_mAP = 64.23
+
+Epoch [23/30], Step [000/1553], LR 1.2e-04, Loss: 50.7
+Epoch [23/30], Step [100/1553], LR 1.2e-04, Loss: 30.3
+Epoch [23/30], Step [200/1553], LR 1.1e-04, Loss: 35.8
+Epoch [23/30], Step [300/1553], LR 1.1e-04, Loss: 40.6
+Epoch [23/30], Step [400/1553], LR 1.1e-04, Loss: 54.3
+Epoch [23/30], Step [500/1553], LR 1.1e-04, Loss: 44.0
+Epoch [23/30], Step [600/1553], LR 1.1e-04, Loss: 48.2
+Epoch [23/30], Step [700/1553], LR 1.0e-04, Loss: 21.6
+Epoch [23/30], Step [800/1553], LR 1.0e-04, Loss: 45.9
+Epoch [23/30], Step [900/1553], LR 1.0e-04, Loss: 48.5
+Epoch [23/30], Step [1000/1553], LR 9.8e-05, Loss: 56.5
+Epoch [23/30], Step [1100/1553], LR 9.6e-05, Loss: 34.6
+Epoch [23/30], Step [1200/1553], LR 9.4e-05, Loss: 58.9
+Epoch [23/30], Step [1300/1553], LR 9.2e-05, Loss: 32.2
+Epoch [23/30], Step [1400/1553], LR 9.1e-05, Loss: 30.1
+Epoch [23/30], Step [1500/1553], LR 8.9e-05, Loss: 35.8
+Prior (train), first 5 classes: tensor([0.0086, 0.0256, 0.0392, 0.0107, 0.0048], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+Prior (train), first 5 classes: tensor([0.0086, 0.0256, 0.0392, 0.0107, 0.0048], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+starting validation
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 59.00, mAP score EMA 59.79
+current_mAP = 59.79, highest_mAP = 64.23
+
+current_mAP = 59.79, highest_mAP = 64.23
+
+Epoch [24/30], Step [000/1553], LR 8.8e-05, Loss: 20.1
+Epoch [24/30], Step [100/1553], LR 8.6e-05, Loss: 36.4
+Epoch [24/30], Step [200/1553], LR 8.4e-05, Loss: 24.9
+Epoch [24/30], Step [300/1553], LR 8.3e-05, Loss: 31.4
+Epoch [24/30], Step [400/1553], LR 8.1e-05, Loss: 34.2
+Epoch [24/30], Step [500/1553], LR 7.9e-05, Loss: 17.7
+Epoch [24/30], Step [600/1553], LR 7.7e-05, Loss: 24.4
+Epoch [24/30], Step [700/1553], LR 7.6e-05, Loss: 62.3
+Epoch [24/30], Step [800/1553], LR 7.4e-05, Loss: 44.6
+Epoch [24/30], Step [900/1553], LR 7.2e-05, Loss: 44.7
+Epoch [24/30], Step [1000/1553], LR 7.1e-05, Loss: 22.0
+Epoch [24/30], Step [1100/1553], LR 6.9e-05, Loss: 41.3
+Epoch [24/30], Step [1200/1553], LR 6.8e-05, Loss: 38.8
+Epoch [24/30], Step [1300/1553], LR 6.6e-05, Loss: 34.7
+Epoch [24/30], Step [1400/1553], LR 6.4e-05, Loss: 36.1
+Epoch [24/30], Step [1500/1553], LR 6.3e-05, Loss: 21.1
+Prior (train), first 5 classes: tensor([0.0083, 0.0250, 0.0387, 0.0104, 0.0047], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+Prior (train), first 5 classes: tensor([0.0083, 0.0250, 0.0387, 0.0104, 0.0047], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+starting validation
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 58.76, mAP score EMA 59.55
+current_mAP = 59.55, highest_mAP = 64.23
+
+current_mAP = 59.55, highest_mAP = 64.23
+
+Epoch [25/30], Step [000/1553], LR 6.2e-05, Loss: 26.2
+Epoch [25/30], Step [100/1553], LR 6.0e-05, Loss: 34.6
+Epoch [25/30], Step [200/1553], LR 5.9e-05, Loss: 26.6
+Epoch [25/30], Step [300/1553], LR 5.7e-05, Loss: 29.7
+Epoch [25/30], Step [400/1553], LR 5.6e-05, Loss: 12.9
+Epoch [25/30], Step [500/1553], LR 5.4e-05, Loss: 49.6
+Epoch [25/30], Step [600/1553], LR 5.3e-05, Loss: 18.4
+Epoch [25/30], Step [700/1553], LR 5.2e-05, Loss: 41.0
+Epoch [25/30], Step [800/1553], LR 5.0e-05, Loss: 24.0
+Epoch [25/30], Step [900/1553], LR 4.9e-05, Loss: 28.7
+Epoch [25/30], Step [1000/1553], LR 4.7e-05, Loss: 27.6
+Epoch [25/30], Step [1100/1553], LR 4.6e-05, Loss: 36.2
+Epoch [25/30], Step [1200/1553], LR 4.5e-05, Loss: 44.5
+Epoch [25/30], Step [1300/1553], LR 4.3e-05, Loss: 26.5
+Epoch [25/30], Step [1400/1553], LR 4.2e-05, Loss: 23.2
+Epoch [25/30], Step [1500/1553], LR 4.1e-05, Loss: 30.8
+Prior (train), first 5 classes: tensor([0.0081, 0.0245, 0.0383, 0.0102, 0.0045], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+Prior (train), first 5 classes: tensor([0.0081, 0.0245, 0.0383, 0.0102, 0.0045], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+starting validation
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 58.76, mAP score EMA 59.34
+current_mAP = 59.34, highest_mAP = 64.23
+
+current_mAP = 59.34, highest_mAP = 64.23
+
+Epoch [26/30], Step [000/1553], LR 4.0e-05, Loss: 31.5
+Epoch [26/30], Step [100/1553], LR 3.9e-05, Loss: 23.9
+Epoch [26/30], Step [200/1553], LR 3.8e-05, Loss: 17.4
+Epoch [26/30], Step [300/1553], LR 3.6e-05, Loss: 28.9
+Epoch [26/30], Step [400/1553], LR 3.5e-05, Loss: 28.7
+Epoch [26/30], Step [500/1553], LR 3.4e-05, Loss: 30.3
+Epoch [26/30], Step [600/1553], LR 3.3e-05, Loss: 30.2
+Epoch [26/30], Step [700/1553], LR 3.2e-05, Loss: 26.8
+Epoch [26/30], Step [800/1553], LR 3.1e-05, Loss: 20.0
+Epoch [26/30], Step [900/1553], LR 3.0e-05, Loss: 32.4
+Epoch [26/30], Step [1000/1553], LR 2.8e-05, Loss: 32.1
+Epoch [26/30], Step [1100/1553], LR 2.7e-05, Loss: 30.9
+Epoch [26/30], Step [1200/1553], LR 2.6e-05, Loss: 33.6
+Epoch [26/30], Step [1300/1553], LR 2.5e-05, Loss: 36.8
+Epoch [26/30], Step [1400/1553], LR 2.4e-05, Loss: 46.2
+Epoch [26/30], Step [1500/1553], LR 2.3e-05, Loss: 27.7
+Prior (train), first 5 classes: tensor([0.0079, 0.0241, 0.0379, 0.0100, 0.0044], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+Prior (train), first 5 classes: tensor([0.0079, 0.0241, 0.0379, 0.0100, 0.0044], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+starting validation
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 58.76, mAP score EMA 59.26
+current_mAP = 59.26, highest_mAP = 64.23
+
+current_mAP = 59.26, highest_mAP = 64.23
+
+Epoch [27/30], Step [000/1553], LR 2.3e-05, Loss: 22.5
+Epoch [27/30], Step [100/1553], LR 2.2e-05, Loss: 30.9
+Epoch [27/30], Step [200/1553], LR 2.1e-05, Loss: 43.3
+Epoch [27/30], Step [300/1553], LR 2.0e-05, Loss: 33.1
+Epoch [27/30], Step [400/1553], LR 1.9e-05, Loss: 28.7
+Epoch [27/30], Step [500/1553], LR 1.8e-05, Loss: 28.3
+Epoch [27/30], Step [600/1553], LR 1.7e-05, Loss: 23.2
+Epoch [27/30], Step [700/1553], LR 1.7e-05, Loss: 65.6
+Epoch [27/30], Step [800/1553], LR 1.6e-05, Loss: 21.0
+Epoch [27/30], Step [900/1553], LR 1.5e-05, Loss: 34.6
+Epoch [27/30], Step [1000/1553], LR 1.4e-05, Loss: 33.8
+Epoch [27/30], Step [1100/1553], LR 1.3e-05, Loss: 34.2
+Epoch [27/30], Step [1200/1553], LR 1.3e-05, Loss: 25.5
+Epoch [27/30], Step [1300/1553], LR 1.2e-05, Loss: 31.4
+Epoch [27/30], Step [1400/1553], LR 1.1e-05, Loss: 37.0
+Epoch [27/30], Step [1500/1553], LR 1.1e-05, Loss: 15.1
+Prior (train), first 5 classes: tensor([0.0077, 0.0236, 0.0375, 0.0098, 0.0042], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+Prior (train), first 5 classes: tensor([0.0077, 0.0236, 0.0375, 0.0098, 0.0042], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+starting validation
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 58.76, mAP score EMA 59.19
+current_mAP = 59.19, highest_mAP = 64.23
+
+current_mAP = 59.19, highest_mAP = 64.23
+
+Epoch [28/30], Step [000/1553], LR 1.0e-05, Loss: 27.4
+Epoch [28/30], Step [100/1553], LR 9.6e-06, Loss: 15.4
+Epoch [28/30], Step [200/1553], LR 8.9e-06, Loss: 46.0
+Epoch [28/30], Step [300/1553], LR 8.3e-06, Loss: 35.3
+Epoch [28/30], Step [400/1553], LR 7.8e-06, Loss: 26.5
+Epoch [28/30], Step [500/1553], LR 7.2e-06, Loss: 25.9
+Epoch [28/30], Step [600/1553], LR 6.7e-06, Loss: 68.9
+Epoch [28/30], Step [700/1553], LR 6.1e-06, Loss: 29.9
+Epoch [28/30], Step [800/1553], LR 5.6e-06, Loss: 25.6
+Epoch [28/30], Step [900/1553], LR 5.2e-06, Loss: 28.5
+Epoch [28/30], Step [1000/1553], LR 4.7e-06, Loss: 27.8
+Epoch [28/30], Step [1100/1553], LR 4.3e-06, Loss: 20.2
+Epoch [28/30], Step [1200/1553], LR 3.9e-06, Loss: 30.9
+Epoch [28/30], Step [1300/1553], LR 3.5e-06, Loss: 21.9
+Epoch [28/30], Step [1400/1553], LR 3.1e-06, Loss: 49.7
+Epoch [28/30], Step [1500/1553], LR 2.7e-06, Loss: 28.9
+Prior (train), first 5 classes: tensor([0.0075, 0.0232, 0.0372, 0.0097, 0.0041], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+Prior (train), first 5 classes: tensor([0.0075, 0.0232, 0.0372, 0.0097, 0.0041], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+starting validation
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 58.89, mAP score EMA 59.12
+current_mAP = 59.12, highest_mAP = 64.23
+
+current_mAP = 59.12, highest_mAP = 64.23
+
+Epoch [29/30], Step [000/1553], LR 2.6e-06, Loss: 23.1
+Epoch [29/30], Step [100/1553], LR 2.2e-06, Loss: 24.4
+Epoch [29/30], Step [200/1553], LR 1.9e-06, Loss: 28.3
+Epoch [29/30], Step [300/1553], LR 1.7e-06, Loss: 22.8
+Epoch [29/30], Step [400/1553], LR 1.4e-06, Loss: 34.6
+Epoch [29/30], Step [500/1553], LR 1.2e-06, Loss: 28.0
+Epoch [29/30], Step [600/1553], LR 9.7e-07, Loss: 25.8
+Epoch [29/30], Step [700/1553], LR 7.7e-07, Loss: 14.2
+Epoch [29/30], Step [800/1553], LR 6.0e-07, Loss: 27.6
+Epoch [29/30], Step [900/1553], LR 4.5e-07, Loss: 33.5
+Epoch [29/30], Step [1000/1553], LR 3.3e-07, Loss: 12.5
+Epoch [29/30], Step [1100/1553], LR 2.2e-07, Loss: 25.9
+Epoch [29/30], Step [1200/1553], LR 1.3e-07, Loss: 24.9
+Epoch [29/30], Step [1300/1553], LR 7.0e-08, Loss: 37.6
+Epoch [29/30], Step [1400/1553], LR 2.7e-08, Loss: 31.4
+Epoch [29/30], Step [1500/1553], LR 5.2e-09, Loss: 27.6
+Prior (train), first 5 classes: tensor([0.0073, 0.0228, 0.0368, 0.0095, 0.0040], device='cuda:0')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+Prior (train), first 5 classes: tensor([0.0073, 0.0228, 0.0368, 0.0095, 0.0040], device='cuda:1')
+Prior (train), first 10 classes: ['wheel' 'shoe' 'trousers' 'table' 'person' 'car_(automobile)' 'jersey'
+ 'short_pants' 'handle' 'shirt']
+starting validation
+Model checkpoint saved successfully.
+starting validation
+mAP score regular 58.91, mAP score EMA 59.07
+current_mAP = 59.07, highest_mAP = 64.23
+
+current_mAP = 59.07, highest_mAP = 64.23
+
